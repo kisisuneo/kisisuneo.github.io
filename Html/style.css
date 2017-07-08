@@ -1,0 +1,46 @@
+ *{
+ 	
+ 	margin:0; 
+ 	box-sizing:border-box;
+ 	padding:0;
+ 	
+ }
+
+ #album{
+ 	width:1000px;
+ 	margin:auto;
+ 	text-align:center;
+ 	background-image:url("http://2.bp.blogspot.com/-htqjJ24YbMQ/URzejdTa-dI/AAAAAAAABEY/lpSNyaaEe5g/s1600/anh-tran-tri-blogger-blogspot_anh-dong-nen-blog_Namkna-blogspot-com_26.gif");
+ 	background-image:url("https://farm6.staticflickr.com/5604/15389508190_31b51e819b_k.jpg");
+ 	font-size: 30px;
+ }
+
+ h1{
+ 	text-align:center;
+ 	margin-right: 0;
+ 	margin-left: 0; 
+ 	color:#04ef0c;
+ 	background-color:#c202fc;
+ }
+
+ #column{
+ 	column-count:3;
+ 	column-gap:20px;
+ 	    height: 800px;
+ }
+
+ .anh{
+ 	text-align:center;
+ 	border: 10px solid orange;
+ 	border-radius:30px;
+ 	break-inside: avoid;
+ 	margin-bottom: 50px;
+ }
+
+img{
+	width:90%;
+ }
+
+
+
+
