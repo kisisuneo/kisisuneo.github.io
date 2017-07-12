@@ -1,0 +1,325 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body{
+	background-image:url('anh/bg.jpg');
+}
+
+img{
+	width: 100%; 
+}
+.div1 {
+	margin-bottom: 200px;
+}
+.div1 p{
+	font-family: 'Amatic SC', cursive;
+    font-size: 100px;
+    font-weight: 600;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -175px;
+}
+
+.div2{
+	margin-bottom: 200px;
+}
+
+.div2 p{
+	margin: auto;
+	width: 50%;
+	font-family: 'Pacifico', cursive;
+	font-size: 22px;
+}
+
+.div2 span{
+	font-size: 108px;
+    float: left;
+    margin-right: 45px;
+    margin-bottom: -37px;
+    margin-top: -42px;
+}
+
+.div3 h5{
+	margin-bottom: 60px;
+}
+
+.div3{
+	width: 60%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+
+.div3 p{
+	margin: auto;
+    width: 82%;
+    font-family: 'Pacifico', cursive;
+    font-size: 22px;
+    margin-bottom: 25px;
+}    
+
+.lacay{
+	width: 100px;
+	margin: auto; 
+	margin-bottom: 40px;
+}
+
+.div4{
+	position:relative;
+}
+
+.div4 p{
+	position: absolute;
+	left: 100px;
+	bottom: 50px;
+	font-size: 30px;
+}
+
+.div4 span{
+	background-color: white;
+}
+
+.div5 img{
+	margin-top: 150px;
+	margin-bottom: 100px;
+}
+.div5 {
+	width: 40%;
+	margin: auto;
+	position: relative;
+}
+
+.div5 p{
+
+	position: absolute;
+    left: -306px;
+    top: 600px;
+    width: 150px;
+}
+
+.div5 span{
+	background-color: white;
+	font-size: 22px;
+}
+
+.div6{
+	width: 40%;
+	margin: auto;
+	position: relative;
+}
+
+.div6 p{
+	width: 150px;
+	position: absolute;
+	right: -306px;
+	top:400px;
+}
+
+.div6 span{
+	background-color: white;
+	font-size: 25px;
+}
+
+.div6 img{
+	margin-bottom: 150px;
+}
+
+.div7 span{
+	background-color: white;
+}
+
+.div7{
+	position:relative;
+}
+
+.div7 p{
+	position: absolute;
+	right: 250px;
+	bottom: 350px;
+	font-size: 30px;
+}
+
+.div7 img{
+	margin-bottom: 150px;
+}
+
+.div8 {
+	position: relative;
+}
+.div8 p{
+	left: 100px;
+	position: absolute;
+	bottom:200px;
+	font-size: 28px;
+}
+
+.div8 img{
+	margin-bottom: 150px;
+}
+
+.div8 span{
+	background-color: white;
+}
+.div9{
+	position: relative;
+	width: 40%;
+	margin: auto;
+}
+
+.div9 p{
+	width: 220px;
+	position:absolute;
+	left:-300px;
+	bottom:350px;
+}
+
+.div9 span{
+	background-color: white;
+	font-size: 28px;
+}
+
+.div9 img{
+	margin-bottom: 200px;
+}
+
+.div10{
+	position: relative;
+	width: 40%;
+	margin: auto;
+}
+
+.div10 span{
+	background-color: white;
+	font-size: 25px;
+}
+
+.div10 p{
+	width: 200px;
+	position: absolute;
+	right:-300px ;
+	bottom:250px;
+}
+
+.div10 img{
+	margin-bottom:150px ; 
+}
+
+.div11{
+	position: relative;
+}
+
+.div11 span{
+	background-color: white;
+	font-size:28px;
+}
+
+.div11 p{
+	position: absolute;
+	right: 100px;
+	bottom: 200px;
+}
+
+.div11 img{
+	margin-bottom:150px ; 
+}
+
+.div12 {
+	position: relative;
+	width: 40%;
+	margin: auto;
+}
+
+.div12 span{
+	background-color: white;
+	font-size: 27px;
+}
+
+.div12 p{
+	position: absolute;
+	top: 90px;
+	left: -320px;
+}
+
+.div12 img{
+	margin-bottom: 200px; 
+}
+
+.div13{
+	position: relative;
+}
+
+.div13 span{
+	background-color: white;
+	font-size: 28px;
+}
+
+.div13 p{
+	position: absolute;
+	top: 50px;
+	left: 100px;
+}
+
+.div13 img{
+	margin-bottom:150px ; 
+}
+
+.div14{
+	position: relative;
+	width: 40%;
+	margin: auto;
+}
+
+.div14 span{
+	background-color: white;
+	font-size: 28px;
+}
+
+.div14 p{
+	position: absolute;
+	top: 75px;
+	right:-360px;
+}
+
+.div14 img{
+	margin-bottom:150px ; 
+}
+
+.div15{
+	position: relative;
+}
+
+.div15 p{
+	position: absolute;
+	bottom: 250px;
+	left: 100px;
+}
+
+.div15 span{
+	background-color: white;
+	font-size: 30px;
+}
+
+.div15 img{
+	margin-bottom: 150px;
+} 
+
+.div16{
+	position: relative;
+	
+}
+
+.div16 p{
+	text-align: center;
+	padding:200px;
+	font-size: 30px;
+	color: white;
+	background-image: url('anh/bg2.jpg');
+}
+
+.div16 img{
+
+}
