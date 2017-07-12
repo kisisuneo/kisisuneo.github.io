@@ -18,7 +18,7 @@
 .li-chinh2 {
 	margin:50px;
 	float:left;
-	border:1px solid #ef00e3;
+	border:1px solid #1df904;
 	padding-left: 10px;
 	padding-right: 10px;
 	position: relative;
@@ -30,7 +30,7 @@
 .li-chinh3 {
 	margin:50px;
 	float:left;
-	border:1px solid #00f7de;
+	border:1px solid #03e8f9;
 	padding-left: 10px;
 	position: relative;
 	font-size:40px;
@@ -68,6 +68,48 @@ body{
 	background-size: 100% ;
 	background-image:url('http://img12.deviantart.net/691d/i/2013/230/c/1/beach_at_night_by_myraalex-d6iot9k.jpg');
 }	
+
+#link{
+	list-style-type: none;
+
+}
+
+.link1{
+	border:1px solid #2bf103;
+	border-radius:20%;
+	float:right;
+	font-size: 40px;
+	margin: 10px;
+	padding: 10px;
+}
+
+.link2{
+	border:1px solid#2bf103;
+	border-radius:20%;
+	float:right;
+	font-size: 40px;
+	margin: 10px;
+	padding: 10px;
+}
+
+.link3{
+	border:1px solid #2bf103;
+	border-radius:20%;
+	float:right;
+	font-size: 40px;
+	margin: 10px;
+	padding: 10px;
+}
+
+a{
+	text-decoration:none;
+}
+
+a:hover {
+	color:#f704b2;
+	background-color:#04c6f7; 
+}
+
 
 
 
