@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-image: url('https://static.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg');
+	background-size: 100% 100%;
+}
+
+#avatar{
+	position: relative;
+	top: 50px;
+	text-align: center;
+}
+
+.p1{
+	font-family: 'Pacifico', cursive;
+	font-size:40px;
+	position: absolute;
+	top: 25px;
+	right: 563px;
+	color: #6e09ea;
+}
+
+.p2{
+	font-family: 'Lobster', cursive;
+	font-size: 40px;
+	position: absolute;
+	top:625px;
+	left: 535px;
+	color: #0e7fef;
+}
+
+.p2 span{
+	background-color: white;
+	color: #0e7fef;
+}
+
+#gthieu{
+	margin-left: 500px;
+	margin-top:200px;
+}
+
+.p3{
+	font-family: 'Pacifico', cursive;
+	font-size: 20px;
+	color: #073bf7;
+}
+
+.p3 span{
+	background-color: white;
+}

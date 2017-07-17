@@ -4,109 +4,82 @@
  	padding:0;	
 }
 
-.li-chinh1 {
-	margin:50px;
-	float:left;
-	border:1px solid #f40404;
-	padding-left: 10px;
-	position: relative;
-	font-size:40px;
-	color:lightblue; 
+body{
+	background-image: url('http://otoxemay.asia/sites/default/files/hinh-nen-may-tinh.jpg');
+	background-size: 100% 100%;
 
 }
 
-.li-chinh2 {
-	margin:50px;
-	float:left;
-	border:1px solid #1df904;
-	padding-left: 10px;
-	padding-right: 10px;
-	position: relative;
-	font-size:40px;
-	color:lightblue; 
+#div-id{
+	column-count: 3;
+	column-gap: 20px;
+	margin-left:200px;
+	margin-top: 75px; 
 
 }
 
-.li-chinh3 {
-	margin:50px;
-	float:left;
-	border:1px solid #03e8f9;
-	padding-left: 10px;
-	position: relative;
-	font-size:40px;
-	color:lightblue; 
-
+#p1 span{
+	background-color: #00efe3;
 }
 
-.li-phu{
-	clear:both;
-	padding-left:30px;
-	padding-right:30px;
-	border:1px solid green;
-	background-color:#ef00e3;
-	font-size:20px;
-	width: 200px;
+p{
+	font-family: 'Pacifico', cursive;
+	font-size: 40px;
 	text-align: center;
 }
 
-ul{
-	list-style-type:none;
-}
-
-.ul-phu{
-	position:absolute;
-	left: 0;
-	display: none;
+.div1 img{
+	width: 75%;
+	border:1px solid black;
+	border-radius: 60%;
+	margin-top: 50px;
 
 }
 
-.li1:hover .ul-phu{
-	display:block;
-}
-
-body{
-	background-size: 100% ;
-	background-image:url('http://img12.deviantart.net/691d/i/2013/230/c/1/beach_at_night_by_myraalex-d6iot9k.jpg');
-}	
-
-#link{
-	list-style-type: none;
+.div2 img{
+	width: 75%;
+	border: 1px solid black;
+	border-radius: 60%;
+	margin-top: 50px;
 
 }
 
-.link1{
-	border:1px solid #2bf103;
-	border-radius:20%;
-	float:right;
-	font-size: 40px;
-	margin: 10px;
-	padding: 10px;
+.div3 img{
+	width: 75%;
+	border: 1px solid black;
+	border-radius: 60%;
+	margin-top: 50px;
+	
+
 }
 
-.link2{
-	border:1px solid#2bf103;
-	border-radius:20%;
-	float:right;
-	font-size: 40px;
-	margin: 10px;
-	padding: 10px;
+.div4 img{
+	width: 75%;
+	border: 1px solid black;
+	border-radius: 60%;
+	margin-top: 50px;
+
 }
 
-.link3{
-	border:1px solid #2bf103;
-	border-radius:20%;
-	float:right;
-	font-size: 40px;
-	margin: 10px;
-	padding: 10px;
+.div5 img{
+	width: 75%;
+	border: 1px solid black;
+	border-radius: 60%;
+	margin-top: 50px;
+
 }
 
-a{
-	text-decoration:none;
+.div6 img{
+	width: 75%;
+	border: 1px solid black;
+	border-radius: 60%;
+	margin-top: 50px;
 }
 
-a:hover {
-	color:#f704b2;
-	background-color:#04c6f7; 
+.div7 img{
+	width: 75%;
+	border: 1px solid black;
+	border-radius: 60%;
+	margin-top: 50px;
 }
 
