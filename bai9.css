@@ -107,21 +107,22 @@ ul{
 
 .div4 img{
 	width: 60%;
-	border-radius: 15px;
-	
+	border-radius: 15px;	
+	margin-left: 220px;
 }
 
-.p3{
+.div4 a{
+	border: 1px solid ;
 	font-size:50px;
 	margin-bottom: 200px;
 	font-family: 'Amatic SC', cursive;
-	top: 50px;
+	top: 60px;
 	color: #a3f402;
-}
+	position: relative;
+	bottom: 125px;
+	right: 525px;
+	padding: 10px;
 
-.p3 span{
-	border: 1px solid black;
-	
 }
 
 
