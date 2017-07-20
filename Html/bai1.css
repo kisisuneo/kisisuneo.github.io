@@ -26,16 +26,20 @@ body{
 
 .p2{
 	font-family: 'Lobster', cursive;
-	font-size: 40px;
+	font-size: 30px;
 	position: absolute;
-	top:625px;
-	left: 535px;
-	color: #0e7fef;
+	top:650px;
+	left:495px;
+	color: #f90158;
+	background-color: 
 }
 
 .p2 span{
-	background-color: white;
-	color: #0e7fef;
+	border: 1px solid;
+	border-radius: 50%;
+	padding: 20px;
+	color: #f90158;
+	margin: 10px;
 }
 
 #gthieu{
@@ -49,10 +53,27 @@ body{
 	color: #073bf7;
 }
 
-.p3 span{
-	background-color: white;
+#write{
+	margin: 100px;
 }
 
-.write{
-	margin-top: 100px;
+#gthieu a{	
+	color: #f90158 !important;
+	text-decoration: none;	
+	float: right;
+	position: relative;
+	bottom: 145px;
+	right: 222px;
+	font-size: 40px;
+	border: 1px solid;
+	border-radius: 60%;
+	padding: 20px;
+	background:  #073bf7;
+
+}
+
+.p4{
+	font-size: 30px;
+	background-color:#f90158;
+	color:  #073bf7;
 }
