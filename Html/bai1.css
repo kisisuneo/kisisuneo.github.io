@@ -39,7 +39,7 @@ body{
 }
 
 #gthieu{
-	margin-left: 500px;
+	margin-left: 60px;
 	margin-top:200px;
 }
 
@@ -51,4 +51,8 @@ body{
 
 .p3 span{
 	background-color: white;
+}
+
+.write{
+	margin-top: 100px;
 }
