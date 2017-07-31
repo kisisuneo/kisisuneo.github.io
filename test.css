@@ -1,0 +1,294 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: underline;
+}
+
+ul{
+	list-style-type: none;
+}
+
+body, html{
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(to left,#09d9f4,#c408f4)
+}
+
+#div1{
+	background-image: url('img/banner.png');
+	background-size: 100%;
+	background-position:center; 
+	height: 100%;
+}
+
+.li1{
+	position: relative;
+	left: 145px;
+	top: 25px;
+	font-size: 30px;
+	color: white;
+	display: inline;
+	padding: 50px;
+	font-family: 'Comfortaa', cursive;
+}
+
+ .intro{
+	text-align: center;
+	margin-top: 260px;
+}
+
+.p1{
+	color: white;
+	font-size: 40px;
+	font-family: 'Comfortaa', cursive;
+	margin-bottom: 10px;
+}
+
+.p2{
+	color: white;
+	font-size: 20px;
+	font-family: 'Comfortaa', cursive;
+}
+
+.start{
+	text-align: center;
+	margin: 25px;
+
+}
+
+.start span{
+	border:0 solid;
+	border-radius:10px;
+	font-size: 20px;
+	font-family: 'Comfortaa', cursive;
+	background-color: #12e876;
+	padding: 8px;
+}
+
+.icon{
+	font-size: 30px;
+	position: absolute;
+	bottom: 10px;
+	right: 610px;
+	color: white;
+}
+
+#div2{
+	background-image: url('img/iphone.png');
+	background-size: 100% 100%;
+	height: 100%;
+}
+
+.p3{
+	position: relative;
+	top: 50px;
+	width: 45%;
+	margin-bottom: 35px;
+}
+
+.p3 .span1{
+	font-size: 40px;
+	margin-left: 50px;
+	font-family: 'Comfortaa', cursive;
+	color: #ae08ca;
+}
+
+.p4{
+	position: relative;
+	top: 50px;
+	width: 33%;
+	margin-left: 50px;
+	font-size: 20px;
+	font-family: 'Comfortaa', cursive;
+}
+
+#div3 .img1{
+	position: relative;
+	top: 48px;
+	margin-top: 80px;
+	margin-left: 80px;	
+}
+
+.p6{
+	position: relative;
+	top: -375px;
+	right: -675px;
+	font-size: 40px;
+	margin-left: 50px;
+	font-family: 'Comfortaa', cursive;
+	color: #ae08ca;
+	width: 200px;
+}
+
+.p5{
+	position: relative;
+	top: -345px;
+	right: 150px;
+	width: 35%;
+	float: right;
+	font-size: 20px;
+	font-family: 'Comfortaa', cursive;
+}
+
+.p7{
+	font-weight: bold;
+	font-size: 15px;
+	font-family: 'Comfortaa', cursive;
+}
+
+.point{
+	position: absolute;
+	right: 550px;
+	margin-top:-150px;
+}
+
+.img2{
+	float: left;
+	position:relative;
+	left: 150px;	
+}
+
+.img3-1{
+	margin-bottom:185px; 
+	margin-right:90px;
+}
+
+.img3{
+	margin: 45px;
+}
+
+.p8{
+	position: relative;
+	top: 260px;
+	width: 230px;
+	left: 75px;
+	font-family: 'Comfortaa', cursive;
+	font-size: 15px;
+}
+
+.p8-5{
+	position: relative;
+	top: 240px;
+	width: 230px;
+	left: 85px;
+	font-family: 'Comfortaa', cursive;
+	font-size: 20px;
+}
+
+#div4{
+	margin-top: 450px;
+	background-image: url('img/subscribe-background.png');
+	background-size: 100%;
+	height: 100%;
+}
+
+.intro5{
+	text-align: center;
+	padding: 300px;
+}
+
+.p9{
+	font-family: 'Comfortaa', cursive;
+	font-size: 30px;
+	color: white;
+	font-weight: bold;
+}
+
+.p10{
+	font-size: 20px;
+	border: 0 solid white;
+	background-color: white;
+	height: 40px;
+	width: 355px;
+	margin: auto;
+	margin-top: 25px;
+	padding: 10px;
+	padding-right: 150px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+}
+
+#div5{
+	width: 515px;
+	margin-top: 135px;
+	margin-left: 425px;
+}
+
+.bonus{
+	width: 100%;
+	margin: auto;
+}
+
+.h3{
+	text-align: center;
+	margin: 30px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bolder;
+}
+
+.h4{
+	text-align: center;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+}
+
+.button1{
+	position: relative;
+	top: 50px;
+	left:-55px;
+	margin: 60px;
+	width: 650px;
+	margin: auto;
+}
+
+.system{
+	border: 0 solid #04ef43;
+	border-radius: 5px;
+	color:white;
+	font-size: 30px;
+	font-weight: bolder;
+	background-color: #04ef43; 
+	padding: 10px;
+	margin: 10px;
+	width: 295px;
+	font-family: 'Comfortaa', cursive;
+	float: left;
+}
+
+.system1{
+	margin-left: 30px;
+	background-color:#028425; 
+	padding:10px;
+}
+
+.up{
+	width: 500px;
+	margin-top: 300px;
+	margin-left: 100px;
+}
+
+
+.last-p1{
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	color: #04ef43;
+}
+
+.last-p2{
+	margin-left : 100px;
+	margin-top: 20px;	
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	color: #04ef43;
+}
+
+.last-pic{
+	position: relative;
+    left: 1111px;
+    bottom: 45px;
+    width: 50px;
+}

@@ -11,7 +11,7 @@ img{
 body{
 	background-color:  #7302f4 !important;
 	position: relative;
-	background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1));
+	background: -moz-linear-gradient(right, #01f7b1, #d602f7);
 }
 
 
@@ -121,8 +121,7 @@ ul{
 	position: relative;
 	bottom: 125px;
 	right: 525px;
-	padding: 10px;
-
+	padding: 8px;
 }
 
 

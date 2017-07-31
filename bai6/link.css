@@ -3,49 +3,49 @@
  	box-sizing:border-box;
  	padding:0;	
 }
+.span1{
+	font-family: 'Bangers', cursive;
+}
 
 .li-chinh1 {
-	margin:50px;
-	float:left;
-	border:1px solid #f40404;
-	padding-left: 10px;
+	margin-top:20px;
+	margin-right:250px;
+	float:right;
+	padding: 10px;
 	position: relative;
 	font-size:40px;
-	color:lightblue; 
+	color:#f701ea; 
 
 }
 
 .li-chinh2 {
-	margin:50px;
-	float:left;
-	border:1px solid #1df904;
-	padding-left: 10px;
-	padding-right: 10px;
+	margin-top:20px;
+	margin-right:50px;
+	float:right;
+	padding: 10px;
 	position: relative;
 	font-size:40px;
-	color:lightblue; 
+	color:#f701ea; 
 
 }
 
 .li-chinh3 {
-	margin:50px;
-	float:left;
-	border:1px solid #03e8f9;
-	padding-left: 10px;
+	margin-top:20px;
+	margin-right:50px;
+	float:right;
+	padding: 10px;
 	position: relative;
 	font-size:40px;
-	color:lightblue; 
+	color:#f701ea; 
 
 }
 
 .li-phu{
 	clear:both;
-	padding-left:30px;
-	padding-right:30px;
-	border:1px solid green;
+	padding:10px;
 	background-color:#ef00e3;
 	font-size:20px;
-	width: 200px;
+	width: 150px;
 	text-align: center;
 }
 
@@ -64,41 +64,8 @@ ul{
 	display:block;
 }
 
-body{
-	background-size: 100% ;
-	background-image:url('http://img12.deviantart.net/691d/i/2013/230/c/1/beach_at_night_by_myraalex-d6iot9k.jpg');
-}	
-
 #link{
 	list-style-type: none;
-
-}
-
-.link1{
-	border:1px solid #2bf103;
-	border-radius:20%;
-	float:right;
-	font-size: 40px;
-	margin: 10px;
-	padding: 10px;
-}
-
-.link2{
-	border:1px solid#2bf103;
-	border-radius:20%;
-	float:right;
-	font-size: 40px;
-	margin: 10px;
-	padding: 10px;
-}
-
-.link3{
-	border:1px solid #2bf103;
-	border-radius:20%;
-	float:right;
-	font-size: 40px;
-	margin: 10px;
-	padding: 10px;
 }
 
 a{
@@ -107,10 +74,49 @@ a{
 
 a:hover {
 	color:#f704b2;
-	background-color:#04c6f7; 
+/*	background-color:#04c6f7; */
 }
 
+.li-phu a{
+	color:#01f7de;
+}
 
+#chinh{
+	border: 1px solid #9401f7;
+	height: 100px;
+	background: linear-gradient(to left, #01f7b1, #d602f7);
 
+	background: -moz-linear-gradient(to left, #01f7b1, #d602f7);
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
 
+#A{
+	margin: 100px;
+	background-color:#ad6ded;
+	width:700px;
+	margin: auto;
+	height:1000px;
+}
 
+#B{
+	background-color:#91f2e8;
+	margin-top:-900px;
+	width: 325px;
+	height: 325px;
+}
+
+#B img{
+	width: 10%;
+	border: 0 solid;
+	border-radius: 50%;
+	position: absolute;
+	top: 140px;
+	left: 80px;
+}
+
+.B{
+	position: absolute;
+	top: 290px;
+}
