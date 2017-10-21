@@ -47,6 +47,7 @@
 	font-size:20px;
 	width: 150px;
 	text-align: center;
+	color:  #01f7b1;
 }
 
 ul{
@@ -85,7 +86,6 @@ a:hover {
 	border: 1px solid #9401f7;
 	height: 100px;
 	background: linear-gradient(to left, #01f7b1, #d602f7);
-
 	background: -moz-linear-gradient(to left, #01f7b1, #d602f7);
 	position: fixed;
 	width: 100%;
@@ -93,7 +93,6 @@ a:hover {
 }
 
 #A{
-	margin: 100px;
 	background-color:#ad6ded;
 	width:700px;
 	margin: auto;
@@ -101,7 +100,7 @@ a:hover {
 }
 
 #B{
-	background-color:#91f2e8;
+	background-color:#e811fc;
 	margin-top:-900px;
 	width: 325px;
 	height: 325px;
@@ -119,4 +118,42 @@ a:hover {
 .B{
 	position: absolute;
 	top: 290px;
+}
+
+.span2{
+	font-family: 'Bangers', cursive;
+	color: #04d5f9;
+	font-size: 20px;
+}
+
+.C1{
+	position: relative;
+	top: -300px;
+	height:50px;
+	width: 500px;
+	margin: auto;
+	border:1px solid #f90396;
+	background-color: white;
+
+}
+
+.box1{
+	padding-left: 40px;
+	font-family: 'Itim', cursive;
+}
+
+.box2{
+	font-family: 'Itim', cursive;
+	height: 30px;
+	width: 100px;
+	margin: auto;
+	border:0 solid;
+	background-color: #f90396;
+	padding-top: 5px;
+	padding-left: 15px;
+	color: #03f979;
+	position: absolute;
+    left: 426px;
+    top: 210px;
+
 }
