@@ -10,7 +10,7 @@ img{
 
 body{
 	position: relative;
-	background: -moz-linear-gradient(to right, #01f7b1, #d602f7); 
+	background:linear-gradient(to right, #01f7b1, #d602f7); 
 }
 
 
