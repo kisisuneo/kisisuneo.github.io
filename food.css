@@ -21,7 +21,7 @@ a{
 	padding-right:  15px;
 	padding-left: 15px; 
 	color: black;
-	font-size: 23px;
+	font-size: 25px;
 	font-family: 'Dancing Script', cursive;
 }
 
@@ -56,4 +56,10 @@ span{
 
 #div4{
 	margin-top: 190px;
+}
+
+.small1{
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Amatic SC', cursive;
 }
