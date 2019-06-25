@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="lightbulb.css">
+	<meta charset="UTF-8">
+	<script src="lightbulb.js" type="text/javascript"></script>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+         var book = new Object();   // Create the object
+         book.subject = "Perl"; // Assign properties to the object
+         book.author  = "Mohtashim";
+      </script>
+      
+   </head>
+   <body>
+      <p contenteditable="true" class="p10">
+      	<span>Click the following button to call the function</span>
+      </p>
+      <p class="span1">
+      	Maybe you can click here to get the notification!
+      </p>
+      <a href="javascript:void(alert('Is this me you looking for?'))" style="text-decoration: none; margin : 14px;"> hello</a>
+      
+      <form>
+		 <span class="span2"><input type="button" onclick ="sayBye('Chun', 16)" value="Hello"></span>
+		 <span class="span2"><input type="button" onclick ="mon(14,15)" value="Console.log(c)"></span>
+		 <span class="span2"> <input type="button" onclick="direct()" value="Move to another page"></span>
+		 <span><input type="checkbox" name="Check"></span>
+      </form>
+	 <script type="text/javascript">
+         document.write("Book name is : " + book.subject + "<br>");
+         document.write("Book author is : " + book.author + "<br>");
+      </script>
+	
+</body>
+</html>

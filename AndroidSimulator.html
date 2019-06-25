@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New Android Emulator</title>
+  </head>
+  <body>
+    <div id="emulator">
+      <img id="background">
+      <div id="status-bar" onmousedown="nots.style.height = 100+'%'">
+        <div id="status2">
+          <div id="keyb">
+            <svg fill="#757575"  width="24" height="24" viewBox="0 0 24 24"><path d="M18.984 9.984V8.015h-1.969v1.969h1.969zm0 3v-1.969h-1.969v1.969h1.969zm-3-3V8.015h-1.969v1.969h1.969zm0 3v-1.969h-1.969v1.969h1.969zm0 4.032V15H8.015v2.016h7.969zm-9-7.032V8.015H5.015v1.969h1.969zm0 3v-1.969H5.015v1.969h1.969zm1.032-1.968v1.969h1.969v-1.969H8.016zm0-3v1.969h1.969V8.016H8.016zm3 3v1.969h1.969v-1.969h-1.969zm0-3v1.969h1.969V8.016h-1.969zm9-3c1.078 0 1.969.891 1.969 1.969v10.031a1.981 1.981 0 0 1-1.969 1.969H3.985a1.981 1.981 0 0 1-1.969-1.969V6.985c0-1.078.891-1.969 1.969-1.969h16.031z"></path></svg>
+          </div>
+        </div>
+        <div id="status">
+          <span class="sbtxt">100%</span>
+          <svg fill="#959595"  width="22" height="22" viewBox="0 0 22 22"><path d="M15.656 3.984c.75 0 1.359.609 1.359 1.359v15.328c0 .75-.609 1.313-1.359 1.313H8.343c-.75 0-1.359-.563-1.359-1.313V5.343c0-.75.609-1.359 1.359-1.359h1.641V2.015h4.031v1.969h1.641z"/></svg>
+          <svg fill="#757575"  width="22" height="22" viewBox="0 0 22 22"><path d="M21.984 21.984H2.015L21.984 2.015v19.969z"></path></svg>
+          <span class="sbtxt" id="time" style="margin-right: 3px;">0:00 </span>
+        </div>
+      </div>
+      <div id="widgets">
+        <h1 style="color:#fff;font-size:70px;" class="time">0:00</h1>
+        <div id="g-search"><div class="txt"></div><div class="placeholder">Google</div>
+          <div style="position:absolute;top:3px;right:3px;cursor:default;">
+          <svg fill="#fff"  width="24" height="24" viewBox="0 0 24 24"><path d="M17.297 11.016h1.688c0 3.422-2.719 6.234-6 6.703V21h-1.969v-3.281c-3.281-.469-6-3.281-6-6.703h1.688c0 3 2.531 5.063 5.297 5.063s5.297-2.063 5.297-5.063zm-5.297 3a3.02 3.02 0 0 1-3-3v-6c0-1.641 1.359-3 3-3s3 1.359 3 3v6c0 1.641-1.359 3-3 3z"></path></svg>
+         </div>
+       </div>
+      </div>
+      <div id="bottom-apps">
+        <div class="app" onmousedown="openApp(0,true)">
+          <svg fill="green"  width="42" height="42" viewBox="0 0 24 24"><path d="M6.609 10.781a15.506 15.506 0 0 0 6.609 6.609l2.203-2.203c.281-.281.703-.375 1.031-.234 1.125.375 2.344.563 3.563.563a.96.96 0 0 1 .984.984v3.516a.96.96 0 0 1-.984.984C10.64 21 2.999 13.359 2.999 3.984A.96.96 0 0 1 3.983 3h3.516a.96.96 0 0 1 .984.984c0 1.266.188 2.438.563 3.563.094.328.047.75-.234 1.031z"></path></svg>
+          Telefon
+        </div>
+        <div class="app" onmousedown="openApp(2,true)">
+          <svg fill="blue"  width="42" height="42" viewBox="0 0 24 24"><path d="M21.984 3.984v18L18 18H3.984c-1.078 0-1.969-.938-1.969-2.016v-12c0-1.078.891-1.969 1.969-1.969h16.031c1.078 0 1.969.891 1.969 1.969z"></path></svg>
+          SMS
+        </div>
+        <div class="app" onmousedown="openApp(3,true)">
+          <svg fill="royalblue"  width="42" height="42" viewBox="0 0 24 24"><path d="M16.359 14.016h3.375c.141-.656.281-1.313.281-2.016s-.141-1.359-.281-2.016h-3.375c.094.656.141 1.313.141 2.016s-.047 1.359-.141 2.016zm-1.781 5.531a8.007 8.007 0 0 0 4.359-3.563h-2.953a15.676 15.676 0 0 1-1.406 3.563zm-.234-5.531c.094-.656.141-1.313.141-2.016s-.047-1.359-.141-2.016H9.656c-.094.656-.141 1.313-.141 2.016s.047 1.359.141 2.016h4.688zM12 19.969c.844-1.219 1.5-2.531 1.922-3.984h-3.844c.422 1.453 1.078 2.766 1.922 3.984zM8.016 8.016a15.676 15.676 0 0 1 1.406-3.563 8.007 8.007 0 0 0-4.359 3.563h2.953zm-2.953 7.968a8.015 8.015 0 0 0 4.359 3.563 15.676 15.676 0 0 1-1.406-3.563H5.063zm-.797-1.968h3.375C7.547 13.36 7.5 12.703 7.5 12s.047-1.359.141-2.016H4.266c-.141.656-.281 1.313-.281 2.016s.141 1.359.281 2.016zM12 4.031c-.844 1.219-1.5 2.531-1.922 3.984h3.844C13.5 6.562 12.844 5.249 12 4.031zm6.938 3.985a8.015 8.015 0 0 0-4.359-3.563 15.676 15.676 0 0 1 1.406 3.563h2.953zm-6.938-6c5.531 0 9.984 4.453 9.984 9.984S17.531 21.984 12 21.984 2.016 17.531 2.016 12 6.469 2.016 12 2.016z"></path></svg>
+          Browser
+        </div>
+        <div class="app" onmousedown="openMenu()">
+          <svg fill="#fff"  width="42" height="42" viewBox="0 0 24 24"><path d="M15.984 20.016v-4.031h4.031v4.031h-4.031zm0-6V9.985h4.031v4.031h-4.031zm-6-6V3.985h4.031v4.031H9.984zm6-4.032h4.031v4.031h-4.031V3.984zm-6 10.032V9.985h4.031v4.031H9.984zm-6 0V9.985h4.031v4.031H3.984zm0 6v-4.031h4.031v4.031H3.984zm6 0v-4.031h4.031v4.031H9.984zm-6-12V3.985h4.031v4.031H3.984z"></path></svg><br>
+          Apps
+        </div>
+      </div>
+      <div id="apps">
+        <div class="title">
+          Apps
+          <div class="title-line"></div>
+        </div>
+        <div class="title" style="margin-left:0;">
+          Widgets
+        </div>
+        <div style="position:absolute;top:6px;right:20px;" onmousedown="openApp(4)">
+          <svg fill="#fff"  width="25" height="25" viewBox="0 0 512 512"><path d="M464 152H360c0-57-46.562-103.859-104-103.859S152 95 152 152H48c18.688 216 13 312 13 312h389.999c-.001 0-5.688-98 13.001-312zM256 74.105c43.008 0 77.999 34.895 77.999 77.895H178c0-43 34.991-77.895 78-77.895zM204 397.64V228.867l142.999 84.387L204 397.64z"/></svg></div><br>
+        <div style="text-align:center;word-wrap:break-word;">
+          <div class="app menuapp" onmousedown="openApp(0,true)"></div>
+          <div class="app menuapp"onmousedown="openApp(1);" ></div>
+          <div class="app menuapp" onmousedown="openApp(2,true)"></div>
+        <div class="app menuapp" onmousedown="openApp(3,true);"></div>
+        <div class="app menuapp" onmousedown="openApp(4);"></div>
+        <div class="app menuapp" onmousedown="alert('This app don\'t work','Error');"></div>
+        <div class="app menuapp"onmousedown="alert('This app don\'t work','Error');"></div>
+       <div class="app menuapp" onmousedown="alert('This app don\'t work','Error');"></div>
+      </div>
+    </div>
+    <div id="keyboard">
+      <div id="k-lets" style="display:none;">
+        <button class="k-btn">q</button>
+        <button class="k-btn">w</button>
+        <button class="k-btn">e</button>
+        <button class="k-btn">r</button>
+        <button class="k-btn">t</button>
+        <button class="k-btn">y</button>
+        <button class="k-btn">u</button>
+        <button class="k-btn">i</button>
+        <button class="k-btn">o</button>
+        <button class="k-btn">p</button><br>
+        <button class="k-btn">a</button>
+        <button class="k-btn">s</button>
+        <button class="k-btn">d</button>
+        <button class="k-btn">f</button>
+        <button class="k-btn">g</button>
+        <button class="k-btn">h</button>
+        <button class="k-btn">j</button>
+        <button class="k-btn">k</button>
+        <button class="k-btn">l</button><br>
+        <button class="k-btn" style="width:30px;" id="tocase"><svg fill="#fff"  width="15" height="15" viewBox="0 0 20 20"><path d="M3.984 12L12 3.984 20.016 12l-1.453 1.406-5.578-5.578v12.188h-1.969V7.828l-5.625 5.578z"></path></svg></button>
+        <button class="k-btn">z</button>
+        <button class="k-btn">x</button>
+        <button class="k-btn">c</button>
+        <button class="k-btn">v</button>
+        <button class="k-btn">b</button>
+        <button class="k-btn">n</button>
+        <button class="k-btn">m</button>
+        <button class="k-btn" style="width:36px;" id="backspace"><svg fill="#fff"  width="20" height="20" viewBox="0 0 24 24"><path d="M18.984 15.609L15.421 12l3.563-3.609-1.406-1.406-3.563 3.609-3.609-3.609L9 8.391 12.609 12 9 15.609l1.406 1.406 3.609-3.609 3.563 3.609zm3-12.609C23.062 3 24 3.938 24 5.016v13.969c0 1.078-.938 2.016-2.016 2.016h-15c-.703 0-1.219-.375-1.594-.891l-5.391-8.109L5.39 3.892c.375-.516.891-.891 1.594-.891h15z"/></svg></button><br>
+        </div>
+      <div id="k-nums">
+        <button class="k-btn">1</button>
+        <button class="k-btn">2</button>
+        <button class="k-btn">3</button>
+        <button class="k-btn">4</button>
+        <button class="k-btn">5</button>
+        <button class="k-btn">6</button>
+        <button class="k-btn">7</button>
+        <button class="k-btn">8</button>
+        <button class="k-btn">9</button>
+        <button class="k-btn">0</button><br>
+        <button class="k-btn">!</button>
+        <button class="k-btn">@</button>
+        <button class="k-btn">#</button>
+        <button class="k-btn">$</button>
+        <button class="k-btn">%</button>
+        <button class="k-btn">^</button>
+        <button class="k-btn">|</button>
+        <button class="k-btn">*</button>
+        <button class="k-btn">(</button>
+        <button class="k-btn">)</button><br>
+        <button class="k-btn">-</button>
+        <button class="k-btn">'</button>
+        <button class="k-btn">"</button>
+        <button class="k-btn">:</button>
+        <button class="k-btn">;</button>
+        <button class="k-btn">,</button>
+        <button class="k-btn">?</button>
+        <button class="k-btn" style="width:36px;" id="backspace"><svg fill="#fff"  width="20" height="20" viewBox="0 0 24 24"><path d="M18.984 15.609L15.421 12l3.563-3.609-1.406-1.406-3.563 3.609-3.609-3.609L9 8.391 12.609 12 9 15.609l1.406 1.406 3.609-3.609 3.563 3.609zm3-12.609C23.062 3 24 3.938 24 5.016v13.969c0 1.078-.938 2.016-2.016 2.016h-15c-.703 0-1.219-.375-1.594-.891l-5.391-8.109L5.39 3.892c.375-.516.891-.891 1.594-.891h15z"/></svg></button><br>
+        </div>
+        <div style="text-align:right;">
+        <button class="k-btn" style="width:40px;" id="openKNums">123</button>
+        <button class="k-btn">,</button>
+        <button class="k-btn" style="width:100px;" id="space">English(US)</button>
+        <button class="k-btn">.</button>
+        <button class="k-btn" style="width:35px;margin-right:15px;margin-left:18px;" id="enter"><svg fill="#fff"  width="20" height="20" viewBox="0 0 20 20"><path d="M20.016 11.016v1.969H7.828l5.578 5.625L12 20.016 3.984 12 12 3.984l1.406 1.406-5.578 5.625h12.188z"></path></svg></button>
+      </div>
+  </div>
+  <div id="nots">
+    <div class="time" style="margin:5px;font-size:25px;color:#fff;display:inline-block;text-align:left;">
+      0:00
+    </div>
+    <div id="date" style="display:inline-block;color:grey;"></div><br>
+    <div style="position:absolute;top:5px;right:5px;" onmousedown="nots.style.height = 0+'%';openApp(1)">
+      <svg fill="#fff"  width="30" height="30" viewBox="0 0 24 24"><path d="M12 15.516c1.922 0 3.516-1.594 3.516-3.516S13.922 8.484 12 8.484 8.484 10.078 8.484 12s1.594 3.516 3.516 3.516zm7.453-2.532l2.109 1.641c.188.141.234.422.094.656L19.64 18.75c-.141.234-.375.281-.609.188l-2.484-.984c-.516.375-1.078.75-1.688.984l-.375 2.625c-.047.234-.234.422-.469.422H9.984c-.234 0-.422-.188-.469-.422l-.375-2.625a6.145 6.145 0 0 1-1.688-.984l-2.484.984c-.234.094-.469.047-.609-.188l-2.016-3.469c-.141-.234-.094-.516.094-.656l2.109-1.641c-.047-.328-.047-.656-.047-.984s0-.656.047-.984L2.437 9.375c-.188-.141-.234-.422-.094-.656L4.359 5.25c.141-.234.375-.281.609-.188l2.484.984c.516-.375 1.078-.75 1.688-.984l.375-2.625c.047-.234.234-.422.469-.422h4.031c.234 0 .422.188.469.422l.375 2.625a6.145 6.145 0 0 1 1.688.984l2.484-.984c.234-.094.469-.047.609.188l2.016 3.469c.141.234.094.516-.094.656l-2.109 1.641c.047.328.047.656.047.984s0 .656-.047.984z"></path></svg>
+    </div>
+    <div style="position:relative;height:75px;">
+      <div class="p-btn"><svg fill="#bbb"  width="36" height="36" viewBox="0 0 24 24"><path d="M5.016 12.984c3.891-3.844 10.125-3.844 13.969 0L17.016 15c-2.766-2.766-7.266-2.766-10.031 0zM9 17.016c1.641-1.641 4.359-1.641 6 0l-3 3zM.984 9c6.094-6.047 15.984-6.047 22.031 0l-2.016 2.016c-4.969-4.969-13.031-4.969-18 0z"/></svg><br>
+        Wi-fi
+      </div>
+      <div class="p-btn" style="left:60px;"><svg fill="#bbb"  width="36" height="36" viewBox="0 0 24 24"><path d="M12 18.984c3.891 0 6.984-3.094 6.984-6.984S15.89 5.016 12 5.016 5.016 8.11 5.016 12 8.11 18.984 12 18.984zm8.953-7.968h2.063v1.969h-2.063c-.469 4.172-3.797 7.5-7.969 7.969v2.063h-1.969v-2.063c-4.172-.469-7.5-3.797-7.969-7.969H.983v-1.969h2.063c.469-4.172 3.797-7.5 7.969-7.969V.984h1.969v2.063c4.172.469 7.5 3.797 7.969 7.969zm-8.953-3c2.203 0 3.984 1.781 3.984 3.984S14.203 15.984 12 15.984 8.016 14.203 8.016 12 9.797 8.016 12 8.016z"></path></svg>
+        GPS
+      </div>
+      <div class="p-btn" style="left:120px;"><svg fill="#bbb"  width="36" height="36" viewBox="0 0 24 24"><path d="M17.672 6.328l2.344-2.344v7.031h-7.031l3.234-3.234C15.141 6.703 13.641 6 12 6c-3.328 0-6 2.672-6 6s2.672 6 6 6c2.625 0 4.875-1.641 5.672-3.984h2.063c-.891 3.469-3.984 6-7.734 6-4.406 0-7.969-3.609-7.969-8.016s3.563-8.016 7.969-8.016a8.01 8.01 0 0 1 5.672 2.344z"></path></svg>
+        Rotation
+      </div>
+      <div class="p-btn" style="left:180px;"><svg fill="#bbb"  width="36" height="36" viewBox="0 0 24 24"><path d="M14.859 16.313l-1.875-1.922v3.797zm-1.875-10.5V9.61l1.875-1.922zm4.735 1.875l-4.313 4.313 4.313 4.313L12 21.986h-.984v-7.594l-4.594 4.594-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 4.594 4.594V2.018H12z"/></svg>
+        Bluetooth
+      </div>
+      <div class="p-btn" style="left:240px;"><svg fill="#bbb"  width="36" height="36" viewBox="0 0 24 24"><path d="M12 18v-3l3.984 3.984L12 23.015v-3c-4.406 0-8.016-3.609-8.016-8.016 0-1.547.469-3.047 1.266-4.266l1.453 1.453C6.234 10.03 6 10.967 6 11.999c0 3.328 2.672 6 6 6zm0-14.016c4.406 0 8.016 3.609 8.016 8.016a7.858 7.858 0 0 1-1.266 4.266l-1.453-1.453c.469-.844.703-1.781.703-2.813 0-3.328-2.672-6-6-6v3L8.016 5.016 12 .985v3z"></path></svg>
+        Sync
+      </div>
+    </div>
+    <div style="margin:12px;display:inline-block">
+      <svg fill="#bbb"  width="24" height="24" viewBox="0 0 24 24"><path d="M12 18c3.328 0 6-2.672 6-6s-2.672-6-6-6v12zm8.016-2.672v4.688h-4.688L12 23.297l-3.328-3.281H3.984v-4.688L.703 12l3.281-3.328V3.984h4.688L12 .703l3.328 3.281h4.688v4.688L23.297 12z"/></svg>
+    </div>
+    <div class="b-stick">
+      <div class="b-pol"></div>
+      <div class="b-prog"></div>
+    </div>
+    <div class="sb-title">
+      <div style="margin-left:15px;">Notifications</div>
+    </div>
+    <div id="notify">
+      <div class="not" id="k-not">
+        <div class="n-img">
+          <svg fill="#fff"  width="60" height="40" viewBox="0 0 24 24"><path d="M18.984 9.984V8.015h-1.969v1.969h1.969zm0 3v-1.969h-1.969v1.969h1.969zm-3-3V8.015h-1.969v1.969h1.969zm0 3v-1.969h-1.969v1.969h1.969zm0 4.032V15H8.015v2.016h7.969zm-9-7.032V8.015H5.015v1.969h1.969zm0 3v-1.969H5.015v1.969h1.969zm1.032-1.968v1.969h1.969v-1.969H8.016zm0-3v1.969h1.969V8.016H8.016zm3 3v1.969h1.969v-1.969h-1.969zm0-3v1.969h1.969V8.016h-1.969zm9-3c1.078 0 1.969.891 1.969 1.969v10.031a1.981 1.981 0 0 1-1.969 1.969H3.985a1.981 1.981 0 0 1-1.969-1.969V6.985c0-1.078.891-1.969 1.969-1.969h16.031z"></path></svg>
+        </div>
+        <div class="n-txt">Keyboard is use</div>
+      </div>
+    </div>
+    <div class="sb-title" style="position:absolute;bottom:0;text-align:center;border-top:1.001px solid #fff" onmousedown="nots.style.height = 0+'%'">
+      Close
+    </div>
+  </div>
+  <div id="app-view">
+    <div id="app-title">
+      <div id="app-name"></div>
+      <div id="app-icon"></div>
+    </div>
+    <div id="app-body">
+      <div class="application">
+        <div style="background:whitesmoke;height:300px;font-size:22px;text-align:center;">
+          <br><br><br><br>
+          <span>No connection</span><br>
+          <button style="background:green;border-width:0;font-size:22px;color:white;padding:10px;padding-top:5px;padding-bottom:5px;">Try again</button>
+        </div>
+      </div>
+      <div class="application">
+        <div id="main-set">
+        <div class="sb-title">
+          <div style="margin-left:15px;">Network</div>
+        </div>
+        <div class="setting">
+          <label>
+          <div class="s-ico">
+            <svg fill="#fff"  width="33" height="33" viewBox="0 0 24 24"><path d="M5.016 12.984c3.891-3.844 10.125-3.844 13.969 0L17.016 15c-2.766-2.766-7.266-2.766-10.031 0zM9 17.016c1.641-1.641 4.359-1.641 6 0l-3 3zM.984 9c6.094-6.047 15.984-6.047 22.031 0l-2.016 2.016c-4.969-4.969-13.031-4.969-18 0z"/></svg><br>
+          </div>
+          <div class="n-txt">WI-FI</div>
+         <input type="checkbox" class="cbox" onmousedown="pbtns[0].onmousedown()"></label>
+        </div>
+        <div class="setting">
+          <label>
+          <div class="s-ico">
+            <svg fill="#fff"  width="33" height="33" viewBox="0 0 24 24"><path d="M14.859 16.313l-1.875-1.922v3.797zm-1.875-10.5V9.61l1.875-1.922zm4.735 1.875l-4.313 4.313 4.313 4.313L12 21.986h-.984v-7.594l-4.594 4.594-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 4.594 4.594V2.018H12z"/></svg>
+          </div>
+          <div class="n-txt">Bluetooth</div>
+          <input type="checkbox" class="cbox" onmousedown="pbtns[3].onmousedown()"></label>
+        </div>
+        <div class="sb-title">
+          <div style="margin-left:15px;">Other</div>
+        </div>
+        <div class="setting" onmousedown="openSet(0)">
+          <div class="s-ico">
+            <svg fill="#fff"  width="33" height="33" viewBox="0 0 24 24"><path d="M5.016 3.984h13.969v3h-5.484v12h-3v-12H5.017v-3z"></path></svg>
+          </div>
+          <div class="n-txt">Fonts</div>
+        </div>
+        <div class="setting" onmousedown="openSet(1)">
+          <div class="s-ico"><svg fill="#fff"  width="33" height="33" viewBox="0 0 24 24"><path d="M16.359 14.016h3.375c.141-.656.281-1.313.281-2.016s-.141-1.359-.281-2.016h-3.375c.094.656.141 1.313.141 2.016s-.047 1.359-.141 2.016zm-1.781 5.531a8.007 8.007 0 0 0 4.359-3.563h-2.953a15.676 15.676 0 0 1-1.406 3.563zm-.234-5.531c.094-.656.141-1.313.141-2.016s-.047-1.359-.141-2.016H9.656c-.094.656-.141 1.313-.141 2.016s.047 1.359.141 2.016h4.688zM12 19.969c.844-1.219 1.5-2.531 1.922-3.984h-3.844c.422 1.453 1.078 2.766 1.922 3.984zM8.016 8.016a15.676 15.676 0 0 1 1.406-3.563 8.007 8.007 0 0 0-4.359 3.563h2.953zm-2.953 7.968a8.015 8.015 0 0 0 4.359 3.563 15.676 15.676 0 0 1-1.406-3.563H5.063zm-.797-1.968h3.375C7.547 13.36 7.5 12.703 7.5 12s.047-1.359.141-2.016H4.266c-.141.656-.281 1.313-.281 2.016s.141 1.359.281 2.016zM12 4.031c-.844 1.219-1.5 2.531-1.922 3.984h3.844C13.5 6.562 12.844 5.249 12 4.031zm6.938 3.985a8.015 8.015 0 0 0-4.359-3.563 15.676 15.676 0 0 1 1.406 3.563h2.953zm-6.938-6c5.531 0 9.984 4.453 9.984 9.984S17.531 21.984 12 21.984 2.016 17.531 2.016 12 6.469 2.016 12 2.016z"></path></svg>        </div>
+          <div class="n-txt">Language</div>
+        </div>
+        <div class="setting">
+          <div class="s-ico">
+            <svg fill="#fff"  width="33" height="33" viewBox="0 0 24 24"><path d="M18 8.016V3.985h-2.016v4.031H18zm-3 0V3.985h-2.016v4.031H15zm-3 0V3.985H9.984v4.031H12zm6-6c1.078 0 2.016.891 2.016 1.969v16.031c0 1.078-.938 1.969-2.016 1.969H6c-1.078 0-2.016-.891-2.016-1.969l.047-12 5.953-6H18z"></path></svg>
+          </div>
+          <div class="n-txt" onmousedown="openSet(2)">Memory</div>
+        </div>
+        <div class="setting" onmousedown="openSet(3)">
+          <div class="s-ico">
+            <svg fill="#fff"  width="33" height="33" viewBox="0 0 24 24"><path d="M12.984 9V6.984h-1.969V9h1.969zm0 8.016v-6h-1.969v6h1.969zm-.984-15c5.531 0 9.984 4.453 9.984 9.984S17.531 21.984 12 21.984 2.016 17.531 2.016 12 6.469 2.016 12 2.016z"></path></svg>
+          </div>
+          <div class="n-txt">About</div>
+        </div>
+          </div>
+          <div id="fonts-set" class="set-menu">
+            <div class="setting">
+              <div class="p-txt" style="font-family:Arial;" onmousedown="body.style.fontFamily = this.style.fontFamily;">Arial</div>
+            </div>
+            <div class="setting">
+              <div class="p-txt" style="font-family:monospace;" onmousedown="body.style.fontFamily = this.style.fontFamily;">Monospace</div>
+            </div>
+            <div class="setting">
+              <div class="p-txt" style="font-family:cursive;" onmousedown="body.style.fontFamily = this.style.fontFamily;">Cursive</div>
+            </div>
+            <div class="setting">
+              <div class="p-txt" style="font-family:fantasy;" onmousedown="body.style.fontFamily = this.style.fontFamily;">Fantasy</div>
+            </div>
+          </div>
+          <div id="langs-set" class="set-menu">
+            <div class="setting">
+              <div class="p-txt"  onmousedown="">English</div>
+            </div>
+            <div class="setting">
+              <div class="p-txt dis"  onmousedown="">Русский(скоро)</div>
+            </div>
+          </div>
+          <div id="about-set" class="set-menu">
+            <div class="setting">
+              <div class="p-txt dis">Model:<br><span class="mt">Arslan Phone</span></div>
+            </div>
+            <div class="setting">
+              <div class="p-txt dis">Android version:<br><span class="mt">1.6</span></div>
+            </div>
+            <div class="setting">
+              <div class="p-txt dis">Baseband version:<br><span class="mt">UX1Y123X</span></div>
+            </div>
+            <div class="setting">
+              <div class="p-txt dis">Build version:<br><span class="mt">AP.UX1Y124X</span></div>
+            </div>
+          </div>
+          <div id="memor-set" class="set-menu">
+            <div class="setting">
+              <div class="p-txt dis">Storage:<br><span class="mt">1.53 GB available from 2 GB</span></div>
+            </div>
+            <div class="setting">
+              <div class="p-txt dis">RAM:<br><span class="mt">126 MB available from 360 MB</span></div>
+            </div>
+          </div>
+    </div>
+    <div class="application">
+      <div style="background:white;width:100%;height:36px;box-shadow:0 0 5px grey;position:relative;">
+        <div id="b-search" style="border-radius:5px;box-shadow:0 0 3px black;width:215px;height:30px;position:absolute;top:3px;left:20px;">
+          <div class="txt" style="color:black;">http://google.com</div><div class="placeholder" style="color:grey;display:none;">URL</div>
+        </div>
+        <button style="background:white;border-width:0;width:30px;height:30px;border-radius:25px;box-shadow:0 0 3px black;position:absolute;top:3px;left:250px;">GO</button>
+      </div>
+      <div style="height:310px;background:white;text-align:center;">
+        <br><br><br><br><br>
+        <span>Web-page is not available <br>Check your internet connection and try again</span>
+      </div>
+    </div>
+    <div class="application">
+      <div class="setting" onmousedown="document.querySelector('#messanger').style.display = 'block';">
+        <div class="s-ico">
+          <svg fill="#fff" opacity="1.0" width="32" height="32" viewBox="0 0 24 24"><path d="M18.984 12.984h-6v6h-1.969v-6h-6v-1.969h6v-6h1.969v6h6v1.969z"></path></svg>
+        </div>
+        <div class="n-txt">Write message</div>
+      </div>
+      <div id="messanger" style="position:absolute;top:0;left:0;background:whitesmoke;width:100%;height:355px;display:none;">
+        <div id="sms-num" style="width:100%;height:50px;background:white;box-shadow:0 0 5px black;">
+          <div style="margin-left:15px;position:relative;"><div class="txt" style="color:black;top:15px;"></div><div class="placeholder" style="color:grey;top:15px;">Number</div></div>
+        </div>
+        <button style="width:50px;height:50px;border-width:0;background:white;position:absolute;top:0;right:0;" onmousedown="document.querySelector('#messanger').style.display = 'none';"><svg fill="#757575" opacity="1.0" width="32" height="32" viewBox="0 0 24 24"><path d="M12 3.984L20.016 12 12 20.016l-1.406-1.406 5.578-5.625H3.984v-1.969h12.188l-5.578-5.625z"></path></svg></button>
+        <div id="sms-mes" style="width:100%;height:50px;background:white;box-shadow:0 0 5px black;position:absolute;bottom:0;left:0;">
+          <div style="margin-left:15px;position:relative;"><div class="txt" style="color:black;top:15px;"></div><div class="placeholder" style="color:grey;top:15px;">Message</div></div>
+        </div>
+        <button id="sms-send" style="width:50px;height:50px;border-width:0;background:white;position:absolute;bottom:0;right:0;" onmousedown="alert('SIM-Card not found','Error');enter.onmousedown()"><svg fill="#757575"  width="35" height="35" viewBox="0 0 24 24"><path d="M2.016 21v-6.984l15-2.016-15-2.016V3l21 9z"></path></svg></button>
+      </div>
+    </div>
+    <div class="application">
+      <div id="tel-num" style="padding-top:15px;text-align:center;font-size:24px;width:100%;height:90px;background:white;">
+      </div>
+      <div style="text-align:center;background:royalblue;">
+        <div class="tel-btn">1</div>
+        <div class="tel-btn">2</div>
+        <div class="tel-btn">3</div><br>
+        <div class="tel-btn">4</div>
+        <div class="tel-btn">5</div>
+        <div class="tel-btn">6</div><br>
+        <div class="tel-btn">7</div>
+        <div class="tel-btn">8</div>
+        <div class="tel-btn">9</div><br>
+        <div class="tel-btn">*</div>
+        <div class="tel-btn">0</div>
+        <div class="tel-btn">#</div><br>
+        <div class="tel-btn" style="width:290px;"><svg fill="green"  width="32" height="32" viewBox="0 0 24 24"><path d="M6.609 10.781a15.506 15.506 0 0 0 6.609 6.609l2.203-2.203c.281-.281.703-.375 1.031-.234 1.125.375 2.344.563 3.563.563a.96.96 0 0 1 .984.984v3.516a.96.96 0 0 1-.984.984C10.64 21 2.999 13.359 2.999 3.984A.96.96 0 0 1 3.983 3h3.516a.96.96 0 0 1 .984.984c0 1.266.188 2.438.563 3.563.094.328.047.75-.234 1.031z"></path></svg></div>
+      </div>
+      <style media="screen">
+        .tel-btn{
+          width: 80px;
+          padding-top: 12px;
+          margin: 2px;
+          padding-bottom: 12px;
+          text-align: center;
+          display: inline-block;
+          background: royalblue;
+          color: white;
+        }
+        .tel-btn:hover{
+          background: white;
+          color: royalblue;
+        }
+      </style>
+    </div>
+    <div class="application">
+      <div class="setting" onmousedown="document.querySelector('#messanger').style.display = 'block';">
+        <div class="s-ico">
+          <svg fill="#fff" opacity="1.0" width="32" height="32" viewBox="0 0 24 24"><path d="M18.984 12.984h-6v6h-1.969v-6h-6v-1.969h6v-6h1.969v6h6v1.969z"></path></svg>
+        </div>
+        <div class="n-txt">Add note</div>
+        <div id="wr-note">
+          <div class="txt" style="color:white"></div><div class="placeholder" style="color:white">Click to begin write</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div id="modal-back" style="width:100%;height:100%;position:absolute;top:0;left:0;background:black;opacity:0.4;z-index:99;"></div>
+  <div id="modal" style="text-align:left;box-shadow:0 0 5px black;position:absolute;z-index:999;top:125px;left:25px;background:whitesmoke;width:250px;height:170px;">
+    <div id="modal-title" style="width:225px;padding-top:12px;padding-bottom:12px;font-size:18px;padding-left:25px;background:rgb(176,182,222);color:white;box-shadow:0 0 5px grey;">
+      Alert
+    </div>
+    <div id="modal-txt" style="margin:10px;height:65px;">
+      Hello world
+    </div>
+    <button id="modal-btn" onmousedown="closeAlert()" style="background:white;width:100%;height:40px;border-width:0;border-top:1px solid black;">
+      OK
+    </button>
+  </div>
+  <div style="background:black;width:300px;height:25px;display:inline-block;position:absolute;top:380px;left:0;">
+    <button class="cont-btn"><svg fill="#fff"  width="24" height="24" viewBox="0 0 24 24"><path d="M3 6h18v2.016H3V6zm0 6.984v-1.969h18v1.969H3zM3 18v-2.016h18V18H3z"></path></svg></button>
+    <button class="cont-btn" style="left:33.33%;" onmousedown="goHome()"><div style="margin-top:2px;width:16px;height:16px;background:#fff;border-radius:2px;display:inline-block;">
+    </div></button>
+    <button class="cont-btn" id="back-btn" style="left:66.66%;" onmousedown="goBack()"><svg fill="#fff"  width="24" height="24" viewBox="0 0 24 24"><path d="M8.016 5.016L18.985 12 8.016 18.984V5.015z"></path></svg></button>
+  </div>
+    </div><br>
+    <style media="screen">
+    body{
+      text-align: center;
+      font-family:Arial;
+      margin-top: 0;
+      -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }
+    div{
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      user-select:none;
+    }
+    #emulator{
+      width: 300px;
+      height: 380px;
+      padding: 0;
+      cursor: default;
+      position: relative;
+      box-shadow: 0 0 3px grey;
+      background:black;
+      display: inline-block;
+    }
+    #status-bar{
+      position: absolute;
+      top: 0;left: 0;
+      box-shadow: 0 0 3px grey;
+      color: #fff;
+      width: 100%;
+      height: 24px;
+      background: rgb(50,50,50);
+    }
+    #status{
+      font-size: 14px;
+      position: absolute;
+      top: 0;right:0px;
+    }
+    #status2{
+      position: absolute;
+      top: 0;left:5px;
+    }
+    #keyb{
+      display: none;
+    }
+    #nots{
+      width: 100%;
+      height: 0;
+      background: rgb(50,50,50);
+      position: absolute;
+      top: 0;left: 0;
+      text-align: left;
+      transition: height 0.5s ease-in;
+      z-index: 6;
+      overflow: hidden;
+    }
+    #widgets{
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 25px;left:0;
+      z-index: 2;
+    }
+    .p-btn{
+      padding-top: 5px;
+      font-size: 14px;
+      text-align: center;
+      border-radius: 2px;
+      width: 59px;
+      height: 70px;
+      background: #555555;
+      display: inline-block;
+      position: absolute;
+      color: #bbbbbb;
+    }
+    .b-stick{
+      width: 200px;
+      height: 6px;
+      display: inline-block;
+      border-radius: 2px;
+      background: #555;
+      margin-bottom:10px;
+      box-shadow: 0 0 1px #111;
+      position: relative;
+    }
+    .b-prog{
+      width: 190px;
+      height: 4px;
+      display: inline-block;
+      border-radius: 2px;
+      background: royalblue;
+      position: absolute;
+      top:1px;left: 1px;
+      box-shadow: 0 0 1px #111;
+    }
+    .b-pol{
+      width: 15px;
+      height: 15px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 0 1px #111;
+      position: absolute;
+      top:-5px;left: 185px;
+      z-index: 5;
+    }
+    .sb-title{
+      width: 100%;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      background: #555555;
+      font-size: 16px;
+      box-shadow: 0 0 5px #333;
+      color: #fff;
+    }
+    .not{
+      width: 100%;
+      position: relative;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1.111px solid #777;
+      color: #fff;
+      font-size: 18px;
+      display: none;
+    }
+    .setting{
+      width: 100%;
+      position: relative;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1.111px solid #777;
+      color: #fff;
+      font-size: 17px;
+    }
+    .dis{
+      color: grey;
+    }
+    .s-ico{
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 8px;left: 12px;
+    }
+    .cbox{
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 8px;right: 12px;
+    }
+    input[type="checkbox"]:checked{
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAIAAADZ8fBYAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAH4SURBVHjarNRPy6JAHMDxeW9uKURURIeHpKBOHTwEXezQLegQQRRziDEdxQwqoYtHIRI61UWUoD/OAwsLWwvPS9hDbOymlbV+j/rjw+DMCMrlMsZY1/VxFOm6PplMyuUymE6nlmV9RddyuZQkCei6/hV1s9kMaJoWuatp2vuu53kcx7muG6V7Pp8rlQrDMKlUyjTNAFdV1V+v12w26T8xDAMhPJ1O17eqqgJFUX6+2Gg0ivuq1Wqe510GFEUBGOMfr2RZFsMwMV/ZbNZ13csMxhiIovg9dLZtZzKZb75oml4sFtcxURSBIAif4TocDqVSiQoKIfT3pCAIACFEwtVoNALRer1+M4kQCnYdx+n1ep7nXZ8Mh8NAtFgs7na7UK7jOIVCgaIonucvtGma8XjcjyaTyfV67V9WgGvb9gW9xPP8ZrNJp9N+NBaLGYYR+MVuXdu28/k8Fa5+v39vJ/5x9/t9eLRarT7Y4dv1iqIYBv34+Nhuty+4hJDBYPAYTSQSq9Xq8YkMPg+P6fl8/vSk3z2/EMJAtNPphLlBd91AmuO44/H4vy4hpNvtXtFcLue6bsgb/8QlhLTbbYqiaJq2LIuE7rlLCGm1WuPxmLxSKPeNEEJAluXIXYwxkCTp3u/jvQzDgBAClmUhhLIsC1Eky7IkSSzL/h4A4FA1WHmxurkAAAAASUVORK5CYII=') center center no-repeat!important;
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      appearance:none;
+    }
+    input[type="checkbox"]{
+      background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAIAAADZ8fBYAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAACRSURBVHja7MzBCYIxDAbQDNpT5+r5C0kpJUIunaBTKIggCP8OLvFdlL4BntRaAWTmjSEzI6LWKhGx97549t4AJDMvtsyUiKC/EfFz75zzwzbnlDHGm22MIb33F1vvXczsyWZmoqoPNlUVAHc2AOc973nP+zevu9NfMxMAay1iutZqrUkppbVmZsrg7gBKKd8BAPs9ZXWPSUYFAAAAAElFTkSuQmCC') center center no-repeat!important;
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      appearance:none;
+      -webkit-tap-highlight-color:rgba(0,0,0,0);
+    }
+    .n-txt{
+      margin-left: 65px;
+    }
+    .p-txt{
+      margin-left: 25px;
+    }
+    .n-img{
+      position: absolute;
+      top: 10px;left: 10px;
+    }
+    .set-menu{
+      display: none;
+    }
+    #g-search{
+      cursor: text;
+      overflow: hidden;
+      width: 90%;
+      height: 30px;
+      border: 2px solid #fff;
+      position: relative;
+      display: inline-block;
+    }
+    .placeholder{
+      position:absolute;
+      top:4px;
+      left:10px;
+      font-size: 18px;
+      color: #fff;
+    }
+    .txt{
+      position:absolute;
+      top:4px;
+      left:10px;
+      font-size: 18px;
+      color: #fff;
+    }
+    #modal,#modal-back{
+      display: none;
+    }
+    #keyboard{
+      width: 100%;
+      height: 135px;
+      position: absolute;
+      font-family: Arial;
+      bottom: 0;left: 0;
+      z-index: 6;
+      display: none;
+      background: black;
+    }
+    .k-btn{
+      width: 20px;
+      height: 26px;
+      font-family: Arial;
+      border-width: 0;
+      box-shadow: 0 0 3px grey;
+      margin: 1px;
+      margin-top: 5px;
+      color: #fff;
+      font-size: 12px;
+      background: rgb(25,25,25);
+
+    }
+    .application{
+      display: none;
+    }
+    #background{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;left: 0;
+      z-index: 0;
+    }
+    #bottom-apps{
+      width: 100%;
+      height: 75px;
+      position: absolute;
+      bottom: 0;
+    }
+    .title{
+      width: auto;
+      text-align: left;
+      margin: 10px;
+      font-size: 20px;
+      color: #fff;
+      display: inline-block;
+    }
+    .title-line{
+      width: 120%;
+      height: 4px;
+      margin-top: 3px;
+      margin-left: -5%;
+      background: #fff;
+      border-radius: 1px;
+    }
+    #apps{
+      text-align: left;
+      width: 0px;
+      height: 0px;
+      padding: 0;
+      position: absolute;
+      top: 178px;left: 150px;
+      background: rgb(40,40,40);
+      display: inline-block;
+      overflow: hidden;
+      transition:left 0.3s ease-in,top 0.3s ease-in,width 0.3s ease-in,height 0.3s ease-in;
+      z-index: 3;
+    }
+    .app{
+      width: 55px;
+      height: 55px;
+      text-align: center;
+      margin-left: 2px;
+      margin-right: 2px;
+      color: #fff;
+      display: inline-block;
+      font-size: 12px;
+    }
+    .menuapp{
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .sbtxt{
+      position: relative;
+      bottom: 5px;
+    }
+    .hr{
+      width: 100%;
+      height: 1.001px;
+      display: inline-block;
+      background: rgb(60,60,60);
+    }
+    .mt{
+      font-size: 14px;
+    }
+    #app-view{
+      width: 100%;
+      height: 356px;
+      background: rgb(35,35,35);
+      position: absolute;
+      top: 24px;left: 0;
+      display: none;
+      overflow: auto;
+      text-align: left;
+      z-index: 5;
+    }
+    #app-title{
+      width: 100%;
+      text-align: left;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 18px;
+      color: #fff;
+      position: relative;
+      border-bottom: 3px solid royalblue;
+    }
+    #app-name{
+      margin-left: 55px;
+    }
+    #app-icon{
+      width: 42px;
+      height: 42px;
+      position: absolute;
+      top:4px;left: 4px;
+    }
+    .cont-btn{
+      width: 33.333%;
+      height: 25px;
+      position: absolute;
+      background: black;
+      border-width: 0;
+      top: 0;left: 0;
+      outline: 0;
+    }
+
+    </style>
+    <script type="text/javascript">
+    var apps = document.querySelector('#apps');
+    var openKN = document.querySelector('#openKNums');
+    var appView = document.querySelector('#app-view');
+    var appIcon = document.querySelector('#app-icon');
+    var appName = document.querySelector('#app-name');
+    var appTitle = document.querySelector('#app-title');
+    var appBody = document.querySelector('#app-body');
+    var backBtn = document.querySelector('#back-btn');
+    var smsNum = document.querySelector('#sms-num');
+    var smsMes = document.querySelector('#sms-mes');
+    var smsSend = document.querySelector('#sms-send');
+    var telNum = document.querySelector('#tel-num');
+    var modalBack = document.querySelector('#modal-back');
+    var modal = document.querySelector('#modal');
+    var modalTitle = document.querySelector('#modal-title');
+    var modalTxt = document.querySelector('#modal-txt');
+    var application = document.querySelectorAll('.application');
+    var keyboard = document.querySelector('#keyboard');
+    var kLets = document.querySelector('#k-lets');
+    var kNums = document.querySelector('#k-nums');
+    var space = document.querySelector('#space');
+    var fontsSet = document.querySelector('#fonts-set');
+    var langsSet = document.querySelector('#langs-set');
+    var memorSet = document.querySelector('#memor-set');
+    var aboutSet = document.querySelector('#about-set');
+    var enter = document.querySelector('#enter');
+    var mainset = document.querySelector('#main-set');
+    var backspace = document.querySelectorAll('#backspace');
+    var time = document.querySelector('#time');
+    var keyb = document.querySelector('#keyb');
+    var nots = document.querySelector('#nots');
+    var notify = document.querySelector('#notify');
+    var knot = document.querySelector('#k-not');
+    var kbtns = document.querySelectorAll('.k-btn');
+    var pbtns = document.querySelectorAll('.p-btn');
+    var tbtns = document.querySelectorAll('.tel-btn');
+    var bpols = document.querySelector('.b-pol');
+    var bprogs = document.querySelector('.b-prog');
+    var bstick = document.querySelector('.b-stick');
+    var setMs = document.querySelector('.set-menu');
+    var times = document.querySelectorAll('.time');
+    var opens = document.querySelectorAll('.menuapp');
+    var date = document.querySelector('#date');
+    var appOpened = false;
+    var appsOpened = false;
+    var keybOpened = false;
+    var KNopened = false;
+    var appData = [{
+      name:'Telefon',
+      icon:'<svg fill="green"  width="42" height="42" viewBox="0 0 24 24"><path d="M6.609 10.781a15.506 15.506 0 0 0 6.609 6.609l2.203-2.203c.281-.281.703-.375 1.031-.234 1.125.375 2.344.563 3.563.563a.96.96 0 0 1 .984.984v3.516a.96.96 0 0 1-.984.984C10.64 21 2.999 13.359 2.999 3.984A.96.96 0 0 1 3.983 3h3.516a.96.96 0 0 1 .984.984c0 1.266.188 2.438.563 3.563.094.328.047.75-.234 1.031z"></path></svg>',
+      pos:4},
+    {
+      name:'Settings',
+      icon:'  <svg fill="#757575"  width="42" height="42" viewBox="0 0 24 24"><path d="M12 15.516c1.922 0 3.516-1.594 3.516-3.516S13.922 8.484 12 8.484 8.484 10.078 8.484 12s1.594 3.516 3.516 3.516zm7.453-2.532l2.109 1.641c.188.141.234.422.094.656L19.64 18.75c-.141.234-.375.281-.609.188l-2.484-.984c-.516.375-1.078.75-1.688.984l-.375 2.625c-.047.234-.234.422-.469.422H9.984c-.234 0-.422-.188-.469-.422l-.375-2.625a6.145 6.145 0 0 1-1.688-.984l-2.484.984c-.234.094-.469.047-.609-.188l-2.016-3.469c-.141-.234-.094-.516.094-.656l2.109-1.641c-.047-.328-.047-.656-.047-.984s0-.656.047-.984L2.437 9.375c-.188-.141-.234-.422-.094-.656L4.359 5.25c.141-.234.375-.281.609-.188l2.484.984c.516-.375 1.078-.75 1.688-.984l.375-2.625c.047-.234.234-.422.469-.422h4.031c.234 0 .422.188.469.422l.375 2.625a6.145 6.145 0 0 1 1.688.984l2.484-.984c.234-.094.469-.047.609.188l2.016 3.469c.141.234.094.516-.094.656l-2.109 1.641c.047.328.047.656.047.984s0 .656-.047.984z"></path></svg>',
+      pos:1,
+    },
+    {
+      name:'SMS',
+      icon:'<svg fill="blue"  width="42" height="42" viewBox="0 0 24 24"><path d="M21.984 3.984v18L18 18H3.984c-1.078 0-1.969-.938-1.969-2.016v-12c0-1.078.891-1.969 1.969-1.969h16.031c1.078 0 1.969.891 1.969 1.969z"></path></svg>',
+      pos:3},
+    {
+      name:'Browser',
+      icon:'<svg fill="royalblue"  width="42" height="42" viewBox="0 0 24 24"><path d="M16.359 14.016h3.375c.141-.656.281-1.313.281-2.016s-.141-1.359-.281-2.016h-3.375c.094.656.141 1.313.141 2.016s-.047 1.359-.141 2.016zm-1.781 5.531a8.007 8.007 0 0 0 4.359-3.563h-2.953a15.676 15.676 0 0 1-1.406 3.563zm-.234-5.531c.094-.656.141-1.313.141-2.016s-.047-1.359-.141-2.016H9.656c-.094.656-.141 1.313-.141 2.016s.047 1.359.141 2.016h4.688zM12 19.969c.844-1.219 1.5-2.531 1.922-3.984h-3.844c.422 1.453 1.078 2.766 1.922 3.984zM8.016 8.016a15.676 15.676 0 0 1 1.406-3.563 8.007 8.007 0 0 0-4.359 3.563h2.953zm-2.953 7.968a8.015 8.015 0 0 0 4.359 3.563 15.676 15.676 0 0 1-1.406-3.563H5.063zm-.797-1.968h3.375C7.547 13.36 7.5 12.703 7.5 12s.047-1.359.141-2.016H4.266c-.141.656-.281 1.313-.281 2.016s.141 1.359.281 2.016zM12 4.031c-.844 1.219-1.5 2.531-1.922 3.984h3.844C13.5 6.562 12.844 5.249 12 4.031zm6.938 3.985a8.015 8.015 0 0 0-4.359-3.563 15.676 15.676 0 0 1 1.406 3.563h2.953zm-6.938-6c5.531 0 9.984 4.453 9.984 9.984S17.531 21.984 12 21.984 2.016 17.531 2.016 12 6.469 2.016 12 2.016z"></path></svg>',
+      pos:2,},
+    {
+      name:'Google Play',
+      icon:'<svg fill="#fff"  width="42" height="42" viewBox="0 0 512 512"><path d="M464 152H360c0-57-46.562-103.859-104-103.859S152 95 152 152H48c18.688 216 13 312 13 312h389.999c-.001 0-5.688-98 13.001-312zM256 74.105c43.008 0 77.999 34.895 77.999 77.895H178c0-43 34.991-77.895 78-77.895zM204 397.64V228.867l142.999 84.387L204 397.64z"/></svg>',
+      pos:0,
+    },
+    {
+      name:'Clock',
+      icon:'<svg fill="#fff"  width="42" height="42" viewBox="0 0 24 24"><path d="M12 20.016c3.891 0 6.984-3.141 6.984-7.031S15.89 6.001 12 6.001s-6.984 3.094-6.984 6.984S8.11 20.016 12 20.016zm0-16.032c5.016 0 9 3.984 9 9s-3.984 9-9 9-9-3.984-9-9 3.984-9 9-9zm.516 4.032v5.297l3.984 2.391-.797 1.219-4.688-2.906v-6h1.5zM7.922 3.422L3.281 7.219l-1.266-1.5 4.594-3.797zm14.062 2.297l-1.266 1.5-4.641-3.938 1.313-1.5z"></path></svg>'
+    },
+    {
+      name:'Notes',
+      icon:'<svg fill="yellow"  width="42" height="42" viewBox="0 0 24 24"><path d="M5.016 3.984h13.969v3h-5.484v12h-3v-12H5.017v-3z"></path></svg>',
+      pos:5},
+    {
+      name:'Files',
+      icon:'<svg fill="orange"  width="42" height="42" viewBox="0 0 24 24"><path d="M9.984 3.984L12 6h8.016c1.078 0 1.969.938 1.969 2.016V18c0 1.078-.891 2.016-1.969 2.016H3.985c-1.078 0-1.969-.938-1.969-2.016V6c0-1.078.891-2.016 1.969-2.016h6z"/></svg>'
+    }]
+    var txtlength;
+    var target = document.querySelector('#g-search .txt');
+    var placeholder = document.querySelector('#g-search .placeholder');
+    var efun = null;
+    var pclicked = [null,null,null,null,null];
+    for (var i = 0; i < tbtns.length; i++) {
+      tbtns[i].onmousedown = function () {
+        telNum.innerHTML += this.innerHTML;
+      }
+    }
+    tbtns[tbtns.length-1].onmousedown = function () {
+      alert('SIM-Card not found','Error')
+    }
+    bstick.onmousemove = function (e) {
+      var pow = window.innerWidth/2;
+      bpols.style.left = e.pageX-pow+90+'px';
+      bprogs.style.width = e.pageX-pow+90+'px';
+      if(pow-90 > e.pageX){
+        bpols.style.left = 0+'px';
+        bprogs.style.width = 0+'px';
+      }
+      if(pow+95 < e.pageX){
+        bpols.style.left = 185+'px';
+        bprogs.style.width = 190+'px';
+      }
+    }
+      pbtns[0].onmousedown = function () {
+        if (pclicked[0] != true) {
+          this.firstChild.setAttribute('fill','rgb(55,200,55)');
+          this.style.color = 'rgb(55,200,55)';
+          pclicked[0] = true;
+        }
+        else {
+          this.firstChild.setAttribute('fill','#bbb');
+          this.style.color = '#bbb';
+          pclicked[0] = false;
+        }
+      }
+      pbtns[1].onmousedown = function () {
+        if (pclicked[1] != true) {
+          this.firstChild.setAttribute('fill','rgb(55,200,55)');
+          this.style.color = 'rgb(55,200,55)';
+          pclicked[1] = true;
+        }
+        else {
+          this.firstChild.setAttribute('fill','#bbb');
+          this.style.color = '#bbb';
+          pclicked[1] = false;
+        }
+      }
+      pbtns[2].onmousedown = function () {
+        if (pclicked[2] != true) {
+          this.firstChild.setAttribute('fill','rgb(55,200,55)');
+          this.style.color = 'rgb(55,200,55)';
+          pclicked[2] = true;
+        }
+        else {
+          this.firstChild.setAttribute('fill','#bbb');
+          this.style.color = '#bbb';
+          pclicked[2] = false;
+        }
+      }
+      pbtns[3].onmousedown = function () {
+        if (pclicked[3] != true) {
+          this.firstChild.setAttribute('fill','rgb(55,200,55)');
+          this.style.color = 'rgb(55,200,55)';
+          pclicked[3] = true;
+        }
+        else {
+          this.firstChild.setAttribute('fill','#bbb');
+          this.style.color = '#bbb';
+          pclicked[3] = false;
+        }
+      }
+      pbtns[4].onmousedown = function () {
+        if (pclicked[4] != true) {
+          this.firstChild.setAttribute('fill','rgb(55,200,55)');
+          this.style.color = 'rgb(55,200,55)';
+          pclicked[4] = true;
+        }
+        else {
+          this.firstChild.setAttribute('fill','#bbb');
+          this.style.color = '#bbb';
+          pclicked[4] = false;
+        }
+      }
+    setInterval(function () {
+      var d = new Date();
+      var m = d.getMinutes();
+      var h = d.getHours();
+      if (m.toString().length == 1) {
+        m = '0'+m.toString();
+      }
+
+      time.innerHTML = h+":"+m;
+      for (var i = 0; i < times.length; i++) {
+        times[i].innerHTML = h+":"+m;
+      }
+      var od = d.toString();
+      var nd = '';
+      for (var i = 0; i < 11; i++) {
+        nd+=od[i];
+      }
+      date.innerHTML = nd.replace(/ /,', ');
+    },1000);
+    for (var i = 0; i < kbtns.length; i++) {
+      kbtns[i].onmousedown = function(){
+        if (target != null && target.innerHTML.length != txtlength) {
+          target.innerHTML += this.innerText;
+        }
+      }
+    }
+    space.onmousedown = function () {
+      target.innerText += ' ';
+    }
+    backspace[0].onmousedown = function(){
+      var txt = target.innerHTML;
+      var aTxt = [];
+      var ntxt = '';
+      for (var i = 0; i < txt.length; i++) {
+        aTxt.push(txt[i]);
+      }
+      aTxt[aTxt.length-1] = '';
+      for (var i = 0; i < txt.length; i++) {
+        ntxt += aTxt[i];
+      }
+      target.innerHTML = ntxt;
+    }
+    backspace[1].onmousedown = function(){
+      var txt = target.innerHTML;
+      var aTxt = [];
+      var ntxt = '';
+      for (var i = 0; i < txt.length; i++) {
+        aTxt.push(txt[i]);
+      }
+      aTxt[aTxt.length-1] = '';
+      for (var i = 0; i < txt.length; i++) {
+        ntxt += aTxt[i];
+      }
+      target.innerHTML = ntxt;
+    }
+    openKN.onmousedown = function () {
+      if (KNopened == true) {
+        kNums.style.display = "none";
+        kLets.style.display = "block";
+        KNopened = false;
+      }
+      else {
+        kNums.style.display = "block";
+        kLets.style.display = "none";
+        KNopened = true;
+      }
+    }
+    function openMenu() {
+      apps.style.display = "inline-block";
+      setTimeout(function () {
+        apps.style.width = "300px";
+        apps.style.height = "356px";
+        apps.style.top = "24px";
+        apps.style.left = "0px";
+        appsOpened = true;
+      },75);
+      for (var i = 0; i < opens.length; i++) {
+        opens[i].innerHTML = appData[i].icon+appData[i].name;
+      }
+    }
+    function openApp(p,nt) {
+      var name = appData[p].name;
+      var icon = appData[p].icon;
+      appView.style.display = 'block';
+      appOpened = true;
+      appIcon.innerHTML = icon;
+      appName.innerText = name;
+      appTitle.style.display = "block";
+      for (var i = 0; i < application.length; i++) {
+        application[i].style.display = 'none';
+      }
+      application[appData[p].pos].style.display = 'block';
+      if (nt == true) {
+        appTitle.style.display = "none";
+      }
+    }
+    function openSet(i) {
+      mainset.style.display = 'none';
+      for (var a = 0; i < setMs.length; i++) {
+        setMs[i].style.display = 'none';
+      }
+      if (i == 0){
+        fontsSet.style.display = 'block';
+        appName.innerText = 'Fonts';
+      }
+      else if (i == 1) {
+        langsSet.style.display = 'block';
+        appName.innerText = 'Language';
+      }
+      else if (i == 2) {
+        memorSet.style.display = 'block';
+        appName.innerText = 'Memory';
+      }
+      else if (i == 3) {
+        aboutSet.style.display = 'block';
+        appName.innerText = 'About';
+      }
+      backBtn.onmousedown = function () {
+        mainset.style.display = 'block';
+        enter.onmousedown();
+        if (i == 0){
+          fontsSet.style.display = 'none';;
+        }
+        else if (i == 1) {
+          langsSet.style.display = 'none';
+        }
+        else if (i == 2) {
+          memorSet.style.display = 'none';
+        }
+        else if (i == 3) {
+          aboutSet.style.display = 'none';
+        }
+        appName.innerText = 'Settings';
+         backBtn.onmousedown = function () {
+          if (appsOpened == true && appOpened == false) {
+            apps.style.width = "0px";
+            apps.style.height = "0px";
+            apps.style.top = "198px";
+            apps.style.left = "150px";
+            appsOpened = false;
+            setTimeout(function () {
+              apps.style.display = "none";
+            },300);
+          }
+          else if (appOpened == true) {
+            appView.style.display = 'none';
+            appOpened = false;
+          }
+            enter.onmousedown();
+        }
+      }
+    }
+    function goHome() {
+      keyboard.style.display = 'none';
+      keyb.style.display = 'none';
+      knot.style.display = 'none';
+      enter.onmousedown();
+      keybOpened = false;
+      appView.style.display = 'none';
+      appOpened = false;
+      apps.style.width = "0px";
+      apps.style.height = "0px";
+      apps.style.top = "198px";
+      apps.style.left = "150px";
+      apps.style.display = "none";
+      nots.style.height = 0+'px';
+    }
+    function goBack() {
+      if (appsOpened == true && appOpened == false) {
+        apps.style.width = "0px";
+        apps.style.height = "0px";
+        apps.style.top = "198px";
+        apps.style.left = "150px";
+        appsOpened = false;
+        setTimeout(function () {
+          apps.style.display = "none";
+        },300);
+      }
+      else if (appOpened == true) {
+        appView.style.display = 'none';
+        appOpened = false;
+      }
+        enter.onmousedown();
+    }
+    function alert(msg,title) {
+      modal.style.display = 'block';
+      modalBack.style.display = 'block';
+      modalTitle.innerHTML = title;
+      modalTxt.innerHTML = msg;
+    }
+    function closeAlert() {
+      modalBack.style.display = 'none';
+      modal.style.display = 'none';
+    }
+    function toInput(id,length,fun1,fun2) {
+      var el = document.querySelector(id);
+      var pr = document.querySelector(id+' .placeholder');
+      var t = document.querySelector(id+' .txt');
+      el.onmousedown = function () {
+        pr.style.display = "none";
+        if (fun1 != null) {
+          fun1();
+        }
+        keyboard.style.display = "block";
+        keyb.style.display = "inline-block";
+        knot.style.display = "inline-block";
+        kNums.style.display = "none";
+        kLets.style.display = "block";
+        keybOpened = true;
+        KNopened = false;
+        target = t;
+        placeholder = pr;
+        txtlength = length;
+        efun = fun2;
+      }
+
+      enter.onmousedown = function () {
+        keyboard.style.display = "none";
+        keyb.style.display = "none";
+        knot.style.display = "none";
+        if (target.innerHTML == '') {
+          placeholder.style.display = "block";
+        }
+        if (efun != null) {
+          efun();
+        }
+      }
+    }
+    toInput('#g-search',70);
+    toInput('#b-search',150);
+    toInput('#sms-num',100);
+    toInput('#sms-mes',100,function () {
+      smsMes.style.bottom = 135+'px';
+      smsSend.style.bottom = 135+'px';
+    },function () {
+      smsMes.style.bottom = 0+'px';
+      smsSend.style.bottom = 0+'px';
+    });
+</script>
+  </body>
+</html>
