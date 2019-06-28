@@ -92,3 +92,66 @@ span{
 	margin : 0;
 	font-family: 'Cutive Mono', monospace;
 }
+
+#div5{
+	margin-top: 200px;
+}
+
+.contactSpan{
+	margin-top: 20px;
+	width: 40%;
+	margin-left: 85px;
+	font-family: 'Cutive Mono', monospace;
+	font-size: 17px;
+	display: block;
+	float: left;
+}
+
+.inputInformation{
+	width: 40%;
+	float: right;
+	margin-top: -15px;
+}
+
+.input1{
+	padding: 10px;
+	border: none;
+    border-bottom: 1px solid;
+    width: 415px;
+}
+
+.input2{
+	padding: 10px;
+	border: none;
+    border-bottom: 1px solid;
+    width: 415px;
+}
+
+.input3{
+	padding: 10px;
+	border: none;
+    border-bottom: 1px solid;
+    width: 415px;
+}
+
+.input4{
+	padding: 10px;
+	border: none;
+    border-bottom: 1px solid;
+    width: 415px;
+}
+
+.buttonThanksAlert{
+	margin-left:0; 
+	margin-top: 40px;
+	padding: 10px;
+	border: none;
+    background-color: #ededda;
+    width: 165px;
+    font-family: 'Lato', sans-serif;
+}
+
+.img1{
+	width: 50%;
+	margin-bottom: 50px;
+}
