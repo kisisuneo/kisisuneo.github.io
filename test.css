@@ -5,7 +5,8 @@
 }
 
 a{
-	text-decoration: underline;
+	
+	text-decoration: none;
 }
 
 ul{
@@ -30,7 +31,7 @@ body, html{
 	left: 145px;
 	top: 25px;
 	font-size: 30px;
-	color: white;
+	
 	display: inline;
 	padding: 50px;
 	font-family: 'Comfortaa', cursive;
@@ -240,7 +241,6 @@ body, html{
 	position: relative;
 	top: 50px;
 	left:-55px;
-	margin: 60px;
 	width: 650px;
 	margin: auto;
 }
@@ -248,7 +248,6 @@ body, html{
 .system{
 	border: 0 solid #04ef43;
 	border-radius: 5px;
-	color:white;
 	font-size: 30px;
 	font-weight: bolder;
 	background-color: #04ef43; 
@@ -258,6 +257,7 @@ body, html{
 	font-family: 'Comfortaa', cursive;
 	float: left;
 }
+
 
 .system1{
 	margin-left: 30px;
