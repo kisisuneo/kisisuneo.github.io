@@ -11,32 +11,41 @@
          var book = new Object();   // Create the object
          book.subject = "Perl"; // Assign properties to the object
          book.author  = "Mohtashim";
+         // ===========================================================//
+         document.write("Book name is : " + book.subject + "<br>");
+         // truyền string = "Perl" vào book.subject rồi xuống dòng
+         document.write("Book author is : " + book.author + "<br>");
+         // tương tự truyền string = 'Mohtashim'
       </script>
       
    </head>
    <body>
       <p contenteditable="true" class="p10">
+      	<!-- contenteditable="true"  có chức năng nhập input vào nhưng không lưu dữ liệu -->
       	<span>Click the following button to call the function</span>
       </p>
       <p class="span1">
       	Maybe you can click here to get the notification!
       </p>
-      <a href="javascript:void(alert('Is this me you looking for?'))" style="text-decoration: none; margin : 14px;"> hello</a>
+      <a href="javascript:void(alert('Is this me you looking for?'))" style="text-decoration: none; margin : 14px;"> hello</a> 
+      <!-- sử dụng href="javascript: void()" thì void để sử dụng chức năng nào đấy ví dụ như alert-->
       
       <form>
 		 <span class="span2"><input type="button" onclick ="sayBye('Chun', 16)" value="Hello"></span>
+		 <!-- có chức năng truyền string='Chun' và number=16 vào hai vị trí a,b của function sayBye(a,b) -->
 		 <span class="span2"><input type="button" onclick ="mon(14,15)" value="Console.log(c)"></span>
-		 <span class="span2"> <input type="button" onclick="direct()" value="Move to another page"></span>
+		 <!-- có chức năng chuyền number=14 và number=15 vào hai vị trí a,b của function mon(a,b) -->
+
+		 <span class="span2"><input type="button" onclick ="direct()" value="Move to another page"></span>
+		 <!-- có chức năng chuyển sang trang khác giống như thẻ <a href =""> của HTML -->
+
 		 <span><input type="checkbox" name="Check"></span>
+		 <!-- có chức năng đánh dấu tick xác nhận -->
+		 <span><input type="button" onclick="confirmAlert()" value="Confirm button"></span>
+
+		 <span><input type="button" onclick ="promptBox()" value="Write your information"></span>
       </form>
-
-
-
-<!-- 	 <script type="text/javascript">
-         document.write("Book name is : " + book.subject + "<br>");
-         document.write("Book author is : " + book.author + "<br>");
-      </script>
-	 -->
+	
 </body>
 </html>
 

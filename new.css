@@ -3,3 +3,41 @@
 	padding: 0px;
 	box-sizing: border-box;
 }
+
+.menu{
+	height: 50px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+	letter-spacing: 4px;
+	width: 100%;
+	position: fixed;
+	top:0;
+	background: white;
+}
+
+a{
+	text-decoration: none;	
+}
+
+.funitureLogo{
+	
+}
+
+.A{
+	margin: 16px;
+	float: right;
+	padding-right: 43px;
+	padding-left: 43px; 
+	color: black;
+	font-size: 15px;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.logoWords{
+	font-family: 'Muli', sans-serif;
+	margin: 40px;
+}
+
+.logo{
+	width: 25%;
+	margin: 15px;
+}
