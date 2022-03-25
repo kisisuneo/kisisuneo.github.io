@@ -43,16 +43,10 @@
 
   <!-- Header -->
   <header id="portfolio">
-    <a href="#">
-      <img src="ThanhBrow.png" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity">
-    </a>
+    <a href="#"><img src="smile.png" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    
     <div class="w3-container">
     <h1><b>Sản phẩm của mọi người</b></h1>
-    <!-- <span class="w3-xxlarge w3-hide-large w3-hide-medium">Sản phẩm </br> của mọi người</span><br> -->
-   <!--  <h1 class="w3-hide-small">Sản phẩm của mọi người</h1><br> -->
-   
     <div class="w3-section w3-bottombar w3-padding-16">
       <span class="w3-margin-right">Filter:</span> 
       <button class="w3-button w3-black">Tất cả</button>
@@ -91,7 +85,7 @@
   <!-- Second Photo Grid-->
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="img4.jpg" alt="Thợ Nhuộm" style="width:100%; height: 260px;" class="w3-hover-opacity" onclick="onClick(this)">
+      <img src="img4.jpg" alt="Một góc phố" style="width:100%; height: 260px;" class="w3-hover-opacity" onclick="onClick(this)">
       <div class="w3-container w3-white">
         <p><b>Một góc phố</b></p>
         <p>Góc phố cũ, nơi lưu giữ nét hoài cổ trường tồn theo năm tháng. Dù thành phố có nhộn nhịp, tấp nập và xô bồ, mỗi lần đi qua ta vẫn thấy bình yên đến lạ.</p>
@@ -294,6 +288,7 @@
 </div>
 
 <script>
+
 // Modal Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
@@ -302,6 +297,22 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
 
 // Script to open and close sidebar
 function w3_open() {
