@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Education of Melta</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+<script src="https://kit.fontawesome.com/5df68592ff.js" crossorigin="anonymous"></script>
+<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+<style>
+  a { text-decoration: none }
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="melta_logo.png" style="width:45%;" class="w3-round"><br><br>
+    <h4><b>MELTA EDUCATION</b></h4>
+    <p class="w3-text-grey">Build your personal brand </br> by your knowledge</p>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>OUR COURSE</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a> 
+    <a href="" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
+    <a href="" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
+      <i class="fab fa-instagram-square fa-lg w3-margin-right" style="font-size: 22px"></i>TEAM
+    </a> 
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#">
+      <img src="melta_logo.png" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity">
+    </a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    
+    <div class="w3-container">
+    <h1><b>OUR COURSE</b></h1>
+    <!-- <span class="w3-xxlarge w3-hide-large w3-hide-medium">Sản phẩm </br> của mọi người</span><br> -->
+   <!--  <h1 class="w3-hide-small">Sản phẩm của mọi người</h1><br> -->
+   
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <span class="w3-margin-right">Filter:</span> 
+
+      <button class="w3-button w3-white"> 
+        <a href="test.html">All</a></button>
+
+      <button class="w3-button w3-black">
+        <i class="fa-regular fa-heart w3-margin-right"></i>Psychology</button>
+
+      <button class="w3-button w3-white">
+        <a href="test_communicate.html"><i class="fa-regular fa-comments w3-margin-right"></i>Communicating</a></button> 
+
+      <button class="w3-button w3-white w3-hide-small">
+        <i class="fa-solid fa-archway w3-margin-right"></i>History</button>
+
+      <button class="w3-button w3-white w3-hide-small">
+        <i class="fa-solid fa-hat-wizard w3-margin-right"></i>Mythology</button>
+
+      <button class="w3-button w3-white w3-hide-small">
+        <i class="fa-solid fa-chart-column w3-margin-right"></i>Investing</button>
+
+
+      <button class="w3-button w3-white w3-hide-small">
+        <i class="fa-solid fa-martini-glass w3-margin-right"></i>Liquor</button>
+
+      <button class="w3-button w3-white w3-hide-small">
+        <i class="fa-solid fa-brain w3-margin-right"></i>Morality</button>
+
+    </div>
+    </div>
+  </header>
+  
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="psy.jpg" alt="Hồ Tây" style="width:100%; height: 200px;" class="w3-hover-opacity" onclick="onClick(this)">
+      <div class="w3-container w3-white">
+        <p><b>Cognitive psychology</b></p>
+        <p>You will never understand how emotion effects a lot on your choice, even you said that you are a reason person.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="psy.jpg" alt="Cầu Long Biên" style="width:100%;height: 200px;" class="w3-hover-opacity" onclick="onClick(this)">
+      <div class="w3-container w3-white">
+        <p><b>Social psychology</b></p>
+        <p>A boy had lost his dream by failing the entrance exam of the Academy of Fine Arts Vienna twice, in 1907 and again in 1908.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="psy.jpg" alt="All Day Coffee" style="width:100%; height: 200px;" class="w3-hover-opacity" onclick="onClick(this)">
+      <div class="w3-container w3-white">
+        <p><b>Abnormal psychology</b></p>
+        <p>"The stock market is never obvious. It is designed to fool most of the people, most of the time." </br> - <b>Jesse Livermore</b></p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="psy.jpg" alt="Thợ Nhuộm" style="width:100%; height: 200px;" class="w3-hover-opacity" onclick="onClick(this)">
+      <div class="w3-container w3-white">
+        <p><b>Behavioral psychology</b></p>
+        <p>"The goal of advertising is to sell more stuff to more people more often for more money." </br> - <b>Sergio Zyman</b> </p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="psy.jpg" alt="Hàng Mã" style="width:100%; height: 200px;" class="w3-hover-opacity" onclick="onClick(this)">
+      <div class="w3-container w3-white">
+        <p><b>Psychoanalysis</b></p>
+        <p>"For all men serve him of their own free will. And he whom Love touches not walks in darkness." </br> - <b>Edith Hamilton</b></p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="psy.jpg" alt="Cảnh phố" style="width:100%; height: 200px;" class="w3-hover-opacity" onclick="onClick(this)">
+      <div class="w3-container w3-white">
+        <p><b>Development psychology</b></p>
+        <p>Alcohol said, “Put that on Facebook, it’s hilarious.” But alcohol was wrong. So very wrong. Whiskey and ice and everything nice.</p>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+
+
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    
+    <h4>MAJOR</h4>
+    <!-- Progress bars / Skills -->
+    <p>Social</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:86%">86%</div>
+    </div>
+    <p>Science</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:75%">75%</div>
+    </div>
+    <p>Skills</p>
+    <div class="w3-grey">
+      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:80%">80%</div>
+    </div>
+    <p>
+      <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
+        <a href="lang_nghe_giao_tiep_small.pdf"><i class="fa fa-download w3-margin-right"></i>IMPORTANT SKILLS </a>
+      </button>
+    </p>
+    <hr>
+    
+    <h4>Nếu tôi muốn hẹn hò với đội quản trị thì cần chi phí bao nhiêu?</h4>
+    <!-- Pricing Tables -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-third w3-margin-bottom">
+        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-black w3-xlarge w3-padding-32">Bucky</li>
+          <li class="w3-padding-16">Giúp bạn code</li>
+          <li class="w3-padding-16">Đèo bạn đi chơi</li>
+          <li class="w3-padding-16">Bao cà phê</li>
+          <li class="w3-padding-16">Nghe tâm sư</li>
+          <li class="w3-padding-16">
+            <h2>$ 23</h2>
+            <span class="w3-opacity">per day</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Đăng ký</button>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="w3-third w3-margin-bottom">
+        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-teal w3-xlarge w3-padding-32">Tường Chun</li>
+          <li class="w3-padding-16">Nấu ăn, quét nhà, rửa bát</li>
+          <li class="w3-padding-16">Không ngủ trước bạn</li>
+          <li class="w3-padding-16">Chơi piano</li>
+          <li class="w3-padding-16">Giỏi tâm lý</li>
+          <li class="w3-padding-16">
+            <h2>$ 25</h2>
+            <span class="w3-opacity">per day</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Đăng ký</button>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="w3-third">
+        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
+          <li class="w3-black w3-xlarge w3-padding-32">Tomic</li>
+          <li class="w3-padding-16">Hướng dẫn cách bet</li>
+          <li class="w3-padding-16">Tâm sự trà đá</li>
+          <li class="w3-padding-16">Sống tệ</li>
+          <li class="w3-padding-16">Dạy cách giao tiếp như fuckboy</li>
+          <li class="w3-padding-16">
+            <h2>$ 24</h2>
+            <span class="w3-opacity">per day</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Đăng ký</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-large w3-grey">
+    <h4 id="contact"><b>Liên lạc chúng mình</b></h4>
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+        <p>melta.community@gmail.com</p>
+      </div>
+      <div class="w3-third w3-teal">
+        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+        <p>47 Lý Thường Kiệt, Hoàn Kiếm, Hà Nội</p>
+      </div>
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+        <p>0936 633 033</p>
+      </div>
+    </div>
+    <hr class="w3-opacity">
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Tên</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Lời nhắn</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Gửi thư tình</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-dark-grey">
+  <div class="w3-row-padding">
+    <div class="w3-third">
+      <h3>About us</h3>
+      <p>Melta Education was founded for youth, the place you can learn and network with others as good as you.</p>
+      <p>Become the best version of yourself !</p>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <a href="https://www.instagram.com/p/CYRYmcsJo0a/">
+        <li class="w3-padding-16">
+          
+            <img src="PsyClothes.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Psychology</span><br>
+            <span>How fashion impacts on our cognition</span>
+          
+        </li>
+        </a>
+
+        <a href="https://www.instagram.com/p/CVVUNJzpwq1/">
+        <li class="w3-padding-16">
+          <img src="PsyTalk.png" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Psychology</span><br>
+          <span>How to make punchlines like comedian</span>
+        </li>
+        </a> 
+      </ul>
+    </div>
+
+    <div class="w3-third">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">All</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Psychology</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Communicating</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">History</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Mythology</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Marketing</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Morality</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Justice</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Investing</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Liquor</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Poker</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Personal finance</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Photograph</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Design</span>
+      </p>
+    </div>
+
+  </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Designed by <a href="https://www.instagram.com/art.in.hanoi/" title="W3.CSS" target="_blank" class="w3-hover-opacity">Education of Melta</a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
