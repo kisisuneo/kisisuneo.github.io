@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+	<title>Education of Melta</title>
+
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+		p {font-family: 'Open Sans', sans-serif;}
+		h3, h4, h5, h6 {font-family: 'Open Sans', sans-serif;}
+		img {width: 100%}
+		footer {
+			background-color: gray;
+			height: 30px
+		}
+	</style>
+</head>
+
+<body>
+	<div style="width: 40%; margin: auto;">
+		<h3>CHAPTER 3</h3>
+		<h3><b>GIỚI THIỆU MẤY CON HÀNG KHÔNG VÔ DỤNG TRONG HTML, CÒN GỌI LÀ THẺ KHÔNG VÔ DỤNG</b></h3>
+
+		<div style="background-color: lightgray; border: 1px solid black;">
+			<p style="margin-left: 20px">Key word gồm có:</p>
+		<span style="text-align: center">
+			<p><b>Thẻ chứa</b></p>
+
+			<p><b>Thẻ ghi viết</b></p>
+
+			<p><b>Thẻ tạo danh sách</b></p>
+		</span>				
+		</div>
+
+		<div>
+
+			<img src="div-definition.png">
+
+			<h4><b>THẺ CHỨA - THÙNG QUẦN ÁO CỦA HTML MANG TÊN ĐÍP</b></br></h4>
+
+			<p>Đi thẳng vào vấn đề luôn thì cái đầu tiên chúng ta nói đến thẻ <span style="color: red"> <span><</span>div<span>></span> </span></p>
+
+			<p><span style="color: red"> <span><</span>div<span>></span> </span> được hiểu đơn giản là tạo ra một cái thùng chứa, giống như việc bạn mua quần áo về nhà thì phải có cái tủ quần áo sẵn rồi, đúng không? Hoặc coi nó là cái cốc đựng nước, còn mấy thành phần bên trong nó là nước.</p>
+
+			<p>Nhìn vào bức ảnh bên trên, bạn hãy coi mỗi cái khung chữ nhật là một thẻ <span style="color: red"> <span><</span>div<span>></span> </span> và bên trong mỗi thẻ <span style="color: red"> <span><</span>div<span>></span> </span> đều có thể chứa thẻ <span style="color: red"> <span><</span>div<span>></span> </span> khác, hay còn gọi là thẻ con (mấy cái thẻ nằm bên trong í).</p>
+
+			<p>Nó không phân biệt chứa ai, nó chỉ quan tâm ai ngang hàng to bằng nó thôi. Mục tiêu của thẻ <span style="color: red"> <span><</span>div<span>></span> </span> để nhóm cái thành phần thẻ khác lại thành một khối và định nghĩa nội dung của một khu vực nào đó.</p>
+
+			<img src="div-ex.png">
+
+			<p>Nhìn vào cái bên trên, những cái cùng màu là cùng độ lớn, được định nghĩa nội dung riêng (nội dung ở đây là đặc điểm hoặc bất cứ thứ gì nhưng được giới hạn lại), bởi mỗi ô là một thẻ <span style="color: red"> <span><</span>div<span>></span> </span>, thì nó có thể định nghĩa tại khu vực đó là màu cam hoặc màu gì đó, hoặc nội dung gì đó.</p>
+
+			<img src="div-code-ex.png">
+
+			<p>Giờ thì bạn hãy tự thử code tất cả vào, đừng bỏ thứ gì, học cách chép code đi đã rồi Ctrl C với Ctrl V sau. Sau khi code xong thì bạn hiểu rồi đấy (phần style là phần đặc điểm bạn dính vào với thẻ <span style="color: red"> <span><</span>div<span>></span> </span>).</p>
+
+		</div>
+
+		<div>
+			<h4><b>THẺ CHỨA - THÙNG ĐỒ CON CON MANG TÊN SỜ PAN</b></br></h4>
+
+			<p>Thùng <span style="color: red"> <span><</span>div<span>></span> </span> to quá, vậy bây giờ gì muốn gắn đặc điểm cho một số thẻ nhỏ hơn thôi thì sao? Lại nhét tiếp <span style="color: red"> <span><</span>div<span>></span> </span> vào cho mệt lòi mắt à? À không, có cái này nhỏ hơn.</p>
+
+			<p><span style="color: red"> <span><</span>span<span>></span> </span> dễ tính hơn. Hình dung bạn có mấy đôi tất hoặc mấy đôi khuyên tai, bạn sẽ không cần mua cmn cả cái tủ quần áo chỉ để đựng mấy thứ đó được. Bạn sẽ mua cái tủ mini, hoặc hộp nhỏ để đựng.</p>
+
+			<img src="div-code-ex.png">
+
+			<p>Nhìn bên trên xem, cái chỗ ô màu xanh biển bên trong màu tím í, bây giờ bạn muốn số 2 thành màu khác thì bạn làm gì?</p>
+			<p>
+				A. Nhét thẻ <span style="color: red"> <span><</span>div<span>></span> </span> to bỏ mẹ vào, xong cho số 2 vào
+				B. Tạo thẻ <span style="color: red"> <span><</span>span<span>></span> </span> rồi nhét số 2 vào 
+				C. Cho đặc điểm vào số 2
+			</p>
+
+			<p>Nếu câu trả lời của bạn là A thì chứng tỏ bạn đang say cafe rồi, ngáo quá ! Câu trả lời là cả B và C đều đúng, để hình dung như này cho dễ.</p>
+
+			<img src="span-ex-1.png">
+			<p>Đây là số 2 và được tạo ra bởi thẻ <span style="color: red"> <span><</span>p<span>></span> </span>, và nó có 2 lựa chọn để trang điểm. Cái đầu tiên là nhét thẻ <span style="color: red"> <span><</span>span<span>></span> </span> thì cơ chế hoạt động của nó là như này. </p>
+
+			<img src="span-ex-2.png">
+
+			<p>Đó là cách hoạt động của gán đặc điểm cho thẻ <span style="color: red"> <span><</span>span<span>></span> </span> và sau đây là cách hoạt động của thẻ gắn trực tiếp.</p>
+
+			<img src="span-ex-3.png">
+
+			<p>Cái khác biệt của việc gắn trực tiếp với gắn qua thẻ <span style="color: red"> <span><</span>span<span>></span> </span> là ví dụ bạn có câu <b>NGƯỜI YÊU TÔI KHÔNG TỒN TẠI.</b> thì khi bạn dùng thẻ <span style="color: red"> <span><</span>span<span>></span> </span> có thể thay đổi được màu sắc của một chữ cái hoặc một từ của câu trên, còn nếu gắn trực tiếp thì sẽ đổi màu của cả câu.</p>
+		</div>
+
+		<div>
+			<h4><b>CÁC THẺ UY TÍN KHI LÀM VIỆC</b></h4>
+
+			<img src="p-h-img.png">
+
+			<p><span style="color: red"> <span><</span>p<span>></span> </span>: không cần nói nhiều, đủ hiểu đây là thẻ dùng để viết chữ rồi.</p>
+			<p><span style="color: red"> <span><</span>h1<span>></span> </span>: bên cạnh thẻ <span style="color: red"> <span><</span>p<span>></span> </span> thì còn có thẻ h được đánh số từ 1 đến 6, và mục đích chính của thẻ này là làm tiêu đề Title. Trong đó <span style="color: red"> <span><</span>h1<span>></span> </span> là to nhất, các số tiến lên 2 3 4 5 6 thì cứ thế nhỏ dần.</p>
+
+			<h5><b>THẺ ẢNH - THẺ NÀY HƠI KHÓ CHÚT</b></h5>
+			<p>Đây là thẻ khá là khó dùng bởi cần phải có đường dẫn ảnh, trong đó <b>src</b> là thuộc tính của thẻ, chứa đường dẫn đến file ảnh.</p>
+			<p> <span style="color: red"> <span><</span>img src=""<span>></span> </span></p>
+
+			<p>Đây là một số hướng dẫn cách dùng đường link cho thẻ img (chữ hơi bé, thông cảm hehe).</p>
+
+			<img src="cach-dung-img.png">
+			<h6><i>Nguồn: Techmaster</i></h6>
+
+			<p>Bên cạnh đó là hãy lưu ý đường link, vì img thường dính lỗi liên quan đến link. Hình dung việc bạn đang code ở file <b>index.html</b> tại <b>folder-1</b> và ảnh bạn cần có tên là <b>pepecuoivl.png</b>, đáng ra bạn sẽ không bị lỗi nhưng vì bạn đã để file ảnh ở <b>folder-2</b>, kết quả là không hiện lên cái gì ở trên web.</p>
+
+			<img src="img-example.png">
+
+			<h4><b>THẺ TẠO DANH SÁCH - UL TRỜI</b></h4>
+			<p>Thay vì tạo nhiều cái khung thì đội phát triển lập trình HỜ TỜ MỜ LỠ đã ra mắt một thẻ giúp bạn tạo ra danh sách thay vì tạo ra nhiều thẻ <span style="color: red"> <span><</span>div<span>></span> </span> trong một thẻ <span style="color: red"> <span><</span>div<span>></span> </span> lớn.</p>
+
+			<p>Chúng ta cùng xem quả thẻ <span style="color: red"> <span><</span>ul<span>></span> </span>, thẻ dùng để khởi tạo một danh sách, và đương nhiên danh sách thì cần có sự liệt kê. Và mỗi ý liệt kê thì ta cần dùng thẻ <span style="color: red"> <span><</span>li<span>></span> </span>. Kết quả sẽ như này:</p>
+
+			<img src="ul-li.png">
+			<p>Chúng ta không nhất thiết phải dùng thẻ <span style="color: red"> <span><</span>p<span>></span> </span> để viết tên vào, cứ viết vô đi. À khi dùng thẻ <span style="color: red"> <span><</span>ul<span>></span> </span> thì mỗi ý có thẻ <span style="color: red"> <span><</span>li<span>></span> </span> thì nó sẽ có một dấu chấm (giống như gach đầu dòng vậy), và để bỏ dấu chấm đi, ta sẽ có cú pháp trong <b>CSS</b> là <span style="color: red"> <span></span><b>li</b> {text-decoration: none}<span></span> </span> và bài sau sẽ giải thích kĩ. </p>
+
+			<p>Bên cạnh thẻ <span style="color: red"> <span><</span>ul<span>></span> </span> thì còn có thẻ <span style="color: red"> <span><</span>ol<span>></span> </span> và nó chỉ khác ở chỗ mỗi ý đầu dòng không phải dấu chấm to đùng mà là đánh số 1 2 3 4 gì gì đó, còn lại vẫn bên trong là thẻ <span style="color: red"> <span><</span>li<span>></span> </span>.</p>
+
+			<h4><b>TẠM THỜI MỆT RỒI, TÁC GIẢ XIN NGHỈ</b></h4>
+			<p>Bài hôm nay đến thế thôi, bên cạnh đó còn nhiều thẻ khác, và nếu các muốn thì có thể qua trang web này <b><a href="https://www.w3schools.com/">W3school</a></b> để tự học thêm nếu muốn. </p>
+
+			<p style="text-align: right;">Tác giả: <b>Tường Chun</b></p>
+
+
+		</div>
+		
+	</div>
+</body>
+</html>

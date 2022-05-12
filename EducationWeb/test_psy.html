@@ -9,10 +9,57 @@
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
 <script src="https://kit.fontawesome.com/5df68592ff.js" crossorigin="anonymous"></script>
 <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
 <style>
   a { text-decoration: none }
   body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+/* Dropdown Button */
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
 </style>
+
 </head>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
@@ -29,7 +76,7 @@
   <div class="w3-bar-block">
     <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>OUR COURSE</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a> 
-    <a href="" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
+    <a href="MeltaEdu.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
     <a href="" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
       <i class="fab fa-instagram-square fa-lg w3-margin-right" style="font-size: 22px"></i>TEAM
     </a> 
@@ -53,60 +100,52 @@
     <h1><b>OUR COURSE</b></h1>
     <!-- <span class="w3-xxlarge w3-hide-large w3-hide-medium">Sản phẩm </br> của mọi người</span><br> -->
    <!--  <h1 class="w3-hide-small">Sản phẩm của mọi người</h1><br> -->
+
+   <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn  w3-black w3-margin-bottom">
+        Filter <i class="fa-solid fa-magnifying-glass" style="margin-left: 5px"></i></button>
+
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Psychology</a>
+          <a href="#">Fact-story</a>
+          <a href="#">Investing</a>
+          <a href="#">Marketing</a>
+          <a href="#">Mythology</a>
+          <a href="#">Liquor</a>
+          <a href="#">Communication</a>
+          <a href="#">Trading techniques</a>
+          <a href="#">Poker</a>
+          <a href="#">Financial accounting</a>
+          <a href="#">Code</a>
+          <a href="#">Music</a>
+        </div>
+    </div>
    
-    <div class="w3-section w3-bottombar w3-padding-16">
-      <span class="w3-margin-right">Filter:</span> 
-
-      <button class="w3-button w3-white"> 
-        <a href="test.html">All</a></button>
-
-      <button class="w3-button w3-black">
-        <i class="fa-regular fa-heart w3-margin-right"></i>Psychology</button>
-
-      <button class="w3-button w3-white">
-        <a href="test_communicate.html"><i class="fa-regular fa-comments w3-margin-right"></i>Communicating</a></button> 
-
-      <button class="w3-button w3-white w3-hide-small">
-        <i class="fa-solid fa-archway w3-margin-right"></i>History</button>
-
-      <button class="w3-button w3-white w3-hide-small">
-        <i class="fa-solid fa-hat-wizard w3-margin-right"></i>Mythology</button>
-
-      <button class="w3-button w3-white w3-hide-small">
-        <i class="fa-solid fa-chart-column w3-margin-right"></i>Investing</button>
-
-
-      <button class="w3-button w3-white w3-hide-small">
-        <i class="fa-solid fa-martini-glass w3-margin-right"></i>Liquor</button>
-
-      <button class="w3-button w3-white w3-hide-small">
-        <i class="fa-solid fa-brain w3-margin-right"></i>Morality</button>
-
-    </div>
-    </div>
   </header>
   
   <!-- First Photo Grid-->
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="psy.jpg" alt="Hồ Tây" style="width:100%; height: 200px;" class="w3-hover-opacity" onclick="onClick(this)">
-      <div class="w3-container w3-white">
-        <p><b>Cognitive psychology</b></p>
-        <p>You will never understand how emotion effects a lot on your choice, even you said that you are a reason person.</p>
+      <a href="psy/test_psy_social.html">
+        <img src="psy.jpg" alt="Social" style="width:100%; height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+      </a>  
       </div>
     </div>
+
     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="psy.jpg" alt="Cầu Long Biên" style="width:100%;height: 200px;" class="w3-hover-opacity" onclick="onClick(this)">
-      <div class="w3-container w3-white">
-        <p><b>Social psychology</b></p>
-        <p>A boy had lost his dream by failing the entrance exam of the Academy of Fine Arts Vienna twice, in 1907 and again in 1908.</p>
+      <a href="https://www.beyondintractability.org/essay/historical-facts">
+        <img src="history.jpg" alt="Cognitive" style="width:100%;height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+      </a>
       </div>
     </div>
-    <div class="w3-third w3-container">
-      <img src="psy.jpg" alt="All Day Coffee" style="width:100%; height: 200px;" class="w3-hover-opacity" onclick="onClick(this)">
-      <div class="w3-container w3-white">
-        <p><b>Abnormal psychology</b></p>
-        <p>"The stock market is never obvious. It is designed to fool most of the people, most of the time." </br> - <b>Jesse Livermore</b></p>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="https://www.investopedia.com/">
+        <img src="invest.jpg" alt="Development" style="width:100%; height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+      </a>
       </div>
     </div>
   </div>
@@ -114,28 +153,83 @@
   <!-- Second Photo Grid-->
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="psy.jpg" alt="Thợ Nhuộm" style="width:100%; height: 200px;" class="w3-hover-opacity" onclick="onClick(this)">
-      <div class="w3-container w3-white">
-        <p><b>Behavioral psychology</b></p>
-        <p>"The goal of advertising is to sell more stuff to more people more often for more money." </br> - <b>Sergio Zyman</b> </p>
+      <a href="">
+        <img src="marketing.jpg" alt="Cross-cultural" style="width:100%; height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+      </a>
       </div>
     </div>
+
     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="psy.jpg" alt="Hàng Mã" style="width:100%; height: 200px;" class="w3-hover-opacity" onclick="onClick(this)">
-      <div class="w3-container w3-white">
-        <p><b>Psychoanalysis</b></p>
-        <p>"For all men serve him of their own free will. And he whom Love touches not walks in darkness." </br> - <b>Edith Hamilton</b></p>
+      <a href="">
+        <img src="myth.jpg" alt="Psychoanalysis" style="width:100%; height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+      </a>
       </div>
     </div>
-    <div class="w3-third w3-container">
-      <img src="psy.jpg" alt="Cảnh phố" style="width:100%; height: 200px;" class="w3-hover-opacity" onclick="onClick(this)">
-      <div class="w3-container w3-white">
-        <p><b>Development psychology</b></p>
-        <p>Alcohol said, “Put that on Facebook, it’s hilarious.” But alcohol was wrong. So very wrong. Whiskey and ice and everything nice.</p>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="">
+        <img src="liquor.jpg" alt="Abnormal" style="width:100%; height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+      </a>
       </div>
     </div>
   </div>
 
+  <!-- Third Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="">
+        <img src="communicate.jpg" alt="Personality" style="width:100%; height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+      </a>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="">
+        <img src="trading.jpg" alt="Behavioral" style="width:100%; height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+      </a>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="">
+        <img src="poker.jpg" alt="Counseling" style="width:100%; height: 200px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fourth Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="">
+        <img src="finance.jpg" alt="Criminal" style="width:100%; height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+      </a>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="">
+        <img src="code.jpg" alt="Morality" style="width:100%; height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+      </a>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="">
+        <img src="music.jpg" alt="Positive" style="width:100%; height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+      </a>
+      </div>
+    </div>
+  </div>
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
@@ -144,18 +238,6 @@
     <p id="caption" class="w3-opacity w3-large"></p>
   </div>
 </div>
-
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-    </div>
-  </div>
 
 
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
@@ -324,6 +406,24 @@
 </div>
 
 <script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}  
 
 
 // Modal Image Gallery

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notification message</title>
+	<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+</head>
+
+<body>
+
+<div id="app" class="ui container">
+	<h1>ERROR Message</h1>
+	<noti-mess type="error" header="Oh no!">
+		Your flight has been canceled !
+	</noti-mess>
+
+	<noti-mess type="success" header="Oh yeah!">
+		Your flight is coming !
+	</noti-mess>
+
+	<noti-mess>
+		Good morning ;)
+	</noti-mess>
+</div>
+
+<script type="text/x-template" id="noti-mess-template">
+	<div class="ui message" :class="type" v-if="!hidden">
+  		<i class="close icon" @click="hide"></i>
+  			<div class="header">
+   			 {{header}}
+  			</div>
+ 		<slot></slot>
+ 	</div>
+</script>
+
+<script src="https://unpkg.com/vue@3"></script>
+
+<script>
+	Vue.createApp({})
+	.component('noti-mess',{
+		template:`#noti-mess-template`,
+		props:{
+			type: {type: String, default: 'info'},
+			header: {type: String, default: 'THIS IS FOR YOU'},
+		},
+	data(){
+		return {
+			hidden: false
+		}
+	},
+	methods: {
+		hide(){
+			this.hidden = true
+		}
+	}	
+	})
+	.mount("#app")
+</script>
+</body>
+</html>

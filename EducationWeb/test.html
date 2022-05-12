@@ -9,10 +9,56 @@
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
 <script src="https://kit.fontawesome.com/5df68592ff.js" crossorigin="anonymous"></script>
 <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+
 <style>
   a { text-decoration: none }
   body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+/* Dropdown Button */
+.dropbtn {
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
 </style>
+
 </head>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
@@ -51,47 +97,17 @@
     
     <div class="w3-container">
     <h1><b>OUR COURSE</b></h1>
-    <!-- <span class="w3-xxlarge w3-hide-large w3-hide-medium">Sản phẩm </br> của mọi người</span><br> -->
-   <!--  <h1 class="w3-hide-small">Sản phẩm của mọi người</h1><br> -->
-   
-    <div class="w3-section w3-bottombar w3-padding-16">
-      <span class="w3-margin-right">Filter:</span> 
-
-      <button class="w3-button w3-black"> All </button>
-
-      <button class="w3-button w3-white">
-        <a href="test_psy.html"><i class="fa-regular fa-heart w3-margin-right"></i>Psychology</a></button>
-
-      <button class="w3-button w3-white">
-        <a href="test_communicate.html"><i class="fa-regular fa-comments w3-margin-right"></i>Communicating</a></button>   
-
-      <button class="w3-button w3-white w3-hide-small">
-        <i class="fa-solid fa-archway w3-margin-right"></i>History</button>
-
-      <button class="w3-button w3-white w3-hide-small">
-        <i class="fa-solid fa-hat-wizard w3-margin-right"></i>Mythology</button>
-
-      <button class="w3-button w3-white w3-hide-small">
-        <i class="fa-solid fa-chart-column w3-margin-right"></i>Investing</button>
-
-      <button class="w3-button w3-white w3-hide-small">
-        <i class="fa-solid fa-martini-glass w3-margin-right"></i>Liquor</button>
-
-      <button class="w3-button w3-white w3-hide-small">
-        <i class="fa-solid fa-brain w3-margin-right"></i>Morality</button>
-
-    </div>
     </div>
   </header>
   
   <!-- First Photo Grid-->
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
-      <a href="https://trangtamly.blog/">
+      <a href="test_psy.html">
         <img src="psy.jpg" alt="Psychology" style="width:100%; height: 200px;" class="w3-hover-opacity">
         <div class="w3-container w3-white">
           <p><b>Psychology</b></p>
-          <p>You will never understand how emotion effects a lot on your choice, even you said that you are a reason person.</p>
+          <p>You will never understand how emotion effects a lot on your choice, even you said that you are a reason person ... <b>Read more</b></p>
       </a>  
       </div>
     </div>
@@ -100,18 +116,18 @@
       <a href="https://www.beyondintractability.org/essay/historical-facts">
         <img src="history.jpg" alt="History" style="width:100%;height: 200px;" class="w3-hover-opacity">
         <div class="w3-container w3-white">
-        <p><b>History</b></p>
+        <p><b>Fact-story</b></p>
         <p>A boy had lost his dream by failing the entrance exam of the Academy of Fine Arts Vienna twice, in 1907 and again in 1908.</p>
       </a>
       </div>
     </div>
 
-    <div class="w3-third w3-container">
+    <div class="w3-third w3-container w3-margin-bottom">
       <a href="https://www.investopedia.com/">
         <img src="invest.jpg" alt="Investing" style="width:100%; height: 200px;" class="w3-hover-opacity">
         <div class="w3-container w3-white">
         <p><b>Investing</b></p>
-        <p>"The stock market is never obvious. It is designed to fool most of the people, most of the time." </br> - <b>Jesse Livermore</b></p>
+        <p>It's not how much money you make, but how much money you keep, how hard it works for you, and how many ... <b>Read more</b></p>
       </a>
       </div>
     </div>
@@ -139,12 +155,78 @@
       </div>
     </div>
 
-    <div class="w3-third w3-container">
+    <div class="w3-third w3-container w3-margin-bottom">
       <a href="">
         <img src="liquor.jpg" alt="Liquor" style="width:100%; height: 200px;" class="w3-hover-opacity">
         <div class="w3-container w3-white">
         <p><b>Liquor</b></p>
         <p>Alcohol said, “Put that on Facebook, it’s hilarious.” But alcohol was wrong. So very wrong. Whiskey and ice and everything nice.</p>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Third Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="">
+        <img src="communicate.jpg" alt="Communication" style="width:100%; height: 200px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+        <p><b>Communication</b></p>
+        <p>Communication is key to success, not key to your crush's heart. But we can help you to unlock her heart ... <b>Read more</b></p>
+      </a>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="">
+        <img src="trading.jpg" alt="Trading" style="width:100%; height: 200px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+        <p><b>Trading techniques</b></p>
+        <p>Trading, act of buying and selling securities based on short-term movements to profit from the price movements ... <b>Read more</b></p>
+      </a>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="">
+        <img src="poker.jpg" alt="Poker" style="width:100%; height: 200px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+        <p><b>Poker</b></p>
+        <p>In hold'em, players receive two down cards as their personal hand (holecards), after which there is a round of betting.</p>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fourth Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="">
+        <img src="finance.jpg" alt="Finance" style="width:100%; height: 200px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+        <p><b>Financial accounting</b></p>
+        <p>Too many people spend money they earned to buy things they don’t want, to impress people that they don’t like ... <b>Read more</b></p>
+      </a>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="">
+        <img src="code.jpg" alt="Code" style="width:100%; height: 200px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+        <p><b>Code</b></p>
+        <p>Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday’s code.</p>
+      </a>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom">
+      <a href="">
+        <img src="music.jpg" alt="Music" style="width:100%; height: 200px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+        <p><b>Music</b></p>
+        <p>If music is a Place — so Jazz is the City, then Folk is the Wilderness, Rock is the Road, and Classical is a Temple ... <b>Read more</b></p>
       </a>
       </div>
     </div>
@@ -158,18 +240,6 @@
     <p id="caption" class="w3-opacity w3-large"></p>
   </div>
 </div>
-
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-    </div>
-  </div>
 
 
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
@@ -338,6 +408,24 @@
 </div>
 
 <script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}  
 
 
 // Modal Image Gallery
