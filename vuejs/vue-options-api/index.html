@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping List App</title>
+
+  <link rel="stylesheet" href="main.css">
+  
+  <style>
+    #shopping-list .select-priority{width: 51%}
+  </style>
+</head>
+
+<body>
+
+
+  <div id="shopping-list">
+    <div class="header">
+      <h1>{{ header || 'Hi Chun' }}</h1>
+      <button v-if="editing" @click="doEdit(false)" class="btn btn-cancel">Cancel</button>
+      <button v-else @click="doEdit(true)" class="btn btn-primary">Add item</button>
+    </div>
+    
+    <div v-if="editing" class="add-item-form">
+      <input @keyup.enter="saveItem" 
+              v-model="newItem" 
+              type="text" 
+              placeholder="Add new items">
+      <p class="counter">{{characterCount}}/200</p>
+      
+      <label>
+      Quality       
+        <input type="checkbox" v-model="newItemHighPriority">
+
+      </label>
+      <button 
+        @click="saveItem" 
+        class="btn btn-primary"
+        :disabled="newItem.length < 5">
+          Save item
+      </button>
+    </div>
+    
+<!-- 
+    <label><input v-model="newItemPriority" type="radio" value="Low">Low</label>
+    <label><input v-model="newItemPriority" type="radio" value="High">High</label> -->
+
+    <!-- <select v-model="newItemPriority" class="select-priority">
+      <option type="radio" value="Low">Low</option>
+      <option type="radio" value="High">High</option>
+    </select> --
+>
+    <!-- <p>Ice cream list: {{iceCreamList}}</p>
+
+    <label><input type="checkbox" v-model="iceCreamList" value="vanila">Vanila</label>
+    <label><input type="checkbox" v-model="iceCreamList" value="matcha">Matcha</label>
+    <label><input type="checkbox" v-model="iceCreamList" value="straberry">Straberry</label>
+    <label><input type="checkbox" v-model="iceCreamList" value="cookies">Cookies</label>
+ -->
+
+    <p v-if="items.length === 0"> Nice! Where all of your items?</p>
+    <ul>
+      <p>List of your items:</p>
+      <li v-for="item in reversedItems"
+          @click="togglePurchased(item)" 
+          :key="item.id"
+          :class="{strikeout: item.purchased, priority: item.highPriority}"
+          class="static-class"> {{item.label}}</li>
+    </ul>
+  </div>
+
+  <script src="https://unpkg.com/vue@3"></script>
+  <script>
+
+    const shoppingList = Vue.createApp({
+      data() {
+        return {
+          header: 'Shopping list app',
+          editing: false,
+          newItem: '',
+          newItemPriority:'',
+          newItemHighPriority: '',
+          iceCreamList: [],
+          items:[
+             {id: 1, label:"10 party hats", purchased: false, highPriority: true},
+             {id: 2, label:"2 board games", purchased: false, highPriority: true},
+             {id: 3, label:"20 cups", purchased: false, highPriority: true}
+          ]
+        }
+      },
+      computed: {
+        characterCount(){
+          return this.newItem.length
+        },
+        reversedItems(){
+          return [...this.items].reverse()
+        }
+      },
+      methods:{
+        saveItem(){
+          this.items.push({
+            id:this.items.length + 1,
+             label: this.newItem,
+             highPriority: this.newItemHighPriority
+           })
+          this.newItem = ""
+          this.newItemHighPriority = ""
+        },
+        doEdit(editing){
+          this.editing = editing
+          this.newItem = ""
+          this.newItemHighPriority = ""
+        },
+        togglePurchased(item){
+          item.purchased = !item.purchased
+        }      
+      }
+    }).mount('#shopping-list')
+  </script>
+</body>
+
+</html> 

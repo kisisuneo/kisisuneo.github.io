@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo List App</title>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
+	<style>
+		h1, p {    
+			font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+		}
+
+		body {
+			background:#eff8ff	
+		}
+
+		ul {
+			list-style: none
+		}
+
+		.strikeout {
+  			text-decoration: line-through;
+  			color: #b8c2cc;
+		}
+
+		.strikeout:hover {
+  			color: #8795a1;
+		}
+
+		.priority {
+  			color: #de751f;
+		}
+
+
+	</style>
+</head>
+<body>
+
+<div id="todo-list" style="margin: auto; width: 50%; background-color: white; box-shadow: 0 4px 8px 0 rgb(0 0 0 / 12%), 0 2px 4px 0 rgb(0 0 0 / 8%); padding: 10px">
+	<div class="header" style="text-align: center;">
+		<h1>{{ header || 'To-do List'}}</h1>
+	</div>
+
+	<div style="padding: 10px">
+		<input
+			@keyup.enter ="saveTodo" 
+			type="text"
+			placeholder="Write down your plan"
+			v-model="newTodo"
+			style="width: 50%;margin: 20px; border: 0px; height: 40px">
+			<label>
+				<button
+					@click="saveTodo"
+					style="
+    					background: aliceblue;
+    					border: 0px;
+    					width: 50px;
+    					height: 25px;">
+						Add 
+				</button>
+			</label>
+			<p style="width: 50%; margin-left: 20px">Necessary plan?<input type="checkbox" v-model="onProcessPlan"></p>
+	</div>
+
+	<p style="width: 50%; margin-left: 30px">Your list:</p>
+	<ul>
+		<li 
+			@click="finishPlan(plan)"
+			v-for="plan in planList"
+			:key="plan.id"
+			:class="{strikeout: plan.finish, priority: plan.onProcess}"
+			class="static-class" 
+
+			>
+			
+			<p><input type="checkbox">{{plan.title}}</p>
+			
+		</li>
+	</ul> 
+</div>
+
+
+
+<script src="https://unpkg.com/vue@3"></script>
+
+<script>
+	const todoList = Vue.createApp({
+		data(){
+			return {
+				header: 'Welcome to To-do List',
+				newTodo: '',
+				onProcessPlan: '',
+				planList: [
+					{id: 1, title: "Reading book", finish: false, onProcess: true},
+					{id: 2, title: "Learning code", finish: false, onProcess: true}
+				]
+			}
+		},
+		methods: {
+			saveTodo(){
+				this.planList.push({
+					id: this.planList.length + 1,
+					title: this.newTodo,
+					onProcess : this.onProcessPlan
+				})
+				this.newTodo = ''
+			},
+			finishPlan(plan){
+				plan.finish = !plan.finish
+			},
+		}
+	}).mount('#todo-list')
+</script>
+</body>
+</html>
