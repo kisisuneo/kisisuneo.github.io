@@ -8906,7 +8906,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px; }
 
-.navbar.scrolled {
+.navbar .scrolled {
   padding-top: 12px;
   padding-bottom: 12px;
   background-color: rgba(200, 185, 251, 0.9); }
