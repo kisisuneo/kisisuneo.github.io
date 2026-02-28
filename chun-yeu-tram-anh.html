@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
+<title>TẶNG SINH NHẬT TRÂM ANH</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -16,19 +16,88 @@ body, html {height: 100%}
   background-size: cover;
 }
 </style>
+
 </head>
 <body>
 
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge" style="color: #12263f">
     Sinh nhật Trâm Anh
+    <audio id="bg-music" loop>
+  <source src="./Forever In Love.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  document.addEventListener("click", function () {
+    document.getElementById("bg-music").play();
+  }, { once: true });
+</script>
+
+<script>
+const text = "CHÚC MỪNG SINH NHẬT";
+const speed = 80;
+let i = 0;
+
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+window.onload = typeWriter;
+</script>
+
+
   </div>
-  <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+  <div class="w3-display-middle" style="text-align:center; width:100%;">
+    <h1 id="typing"
+    class="w3-jumbo w3-animate-top w3-center"
+    style="color: #12263f;
+           background-color: rgba(255, 255, 255, 0.6);
+           display: inline-block;
+           padding: 8px 12px;">
+    </h1>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">Đợi đến ngày 3/3/2025 mới được bật lên nha</p>
+    <p class="w3-large w3-center" style="color: #12263f; background-color: rgba(255, 255, 255, 0.6);
+        display: inline-block;
+        padding: 8px 12px;">cô gái Trâm Anh đã đến tuổi 23 và đủ 600 ngày yêu nhau</p>
+    <div>
+      <a href="./happy-birthday/index.html" class="lux-btn">Nhận lời chúc 💌</a>
+
+<style>
+.lux-btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #1f2d3d;
+  
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 50px;
+
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.lux-btn:hover {
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 6px 30px rgba(0,0,0,0.25);
+  transform: translateY(-2px);
+}
+</style>
+    </div>
   </div>
-  <div class="w3-display-bottomleft w3-padding-large">
+
+
+
+  <div class="w3-display-bottomleft w3-padding-large;" style="color: #12263f;">
     Made by <a href="https://www.instagram.com/tuong_chun/" target="_blank">your boyfriend</a>
   </div>
 </div>
